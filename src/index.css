@@ -850,3 +850,26 @@ body { background: linear-gradient(135deg, #f7faff 0%, var(--terrace-cloud) 54%,
 .profile-cover { background: var(--terrace-cobalt-deep) !important; }
 .profile-cover::after { background: rgba(244, 200, 75, .22); }
 .settings-nav a.is-active { color: var(--terrace-cobalt); background: #eef2ff; box-shadow: inset 3px 0 0 var(--terrace-cobalt); }
+
+/* Sidebar interaction polish: every navigation item gets a visible Dinoc hover state. */
+@media (min-width: 801px) {
+  .sidebar-nav a,
+  .sidebar-nav a span,
+  .sidebar-nav a svg { transition: color .18s ease-out, background-color .18s ease-out, transform .18s ease-out; }
+  .sidebar-nav a:hover,
+  .sidebar-nav a:focus-visible {
+    color: var(--terrace-ink) !important;
+    background: var(--terrace-marigold) !important;
+    outline: none;
+    transform: translateX(3px);
+  }
+  .sidebar-nav a:hover span,
+  .sidebar-nav a:focus-visible span,
+  .sidebar-nav a:hover svg,
+  .sidebar-nav a:focus-visible svg { color: var(--terrace-ink) !important; }
+  .sidebar-nav a.is-active,
+  .sidebar-nav a.is-active span,
+  .sidebar-nav a.is-active svg { color: var(--terrace-cobalt-deep) !important; }
+  .sidebar-nav a.is-active:hover,
+  .sidebar-nav a.is-active:focus-visible { background: #fff !important; transform: none; }
+}

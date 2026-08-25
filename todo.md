@@ -249,3 +249,18 @@
 - [ ] Preserve and verify authentication, posting, feed, stories, likes, comments, messaging, notifications, profile, settings, validation, and responsive interactions.
 - [ ] Build a fresh ZIP and capture the final output page.
 
+
+## dinocchat GitHub audit
+
+- [ ] Inspect `dineshgnanavel01-code/dinocchat` and compare its files with the verified Dinoc project.
+- [ ] Correct any source, dependency, or Vercel configuration issues.
+- [ ] Build and verify the corrected Home and Messages output.
+- [ ] Push the correction and confirm the Vercel deployment status.
+
+
+## Sidebar hover color refinement
+
+- [x] Inspect current sidebar hover and active-state selectors.
+- [x] Add clear accessible hover color changes for all navigation items.
+- [x] Verify hover behavior and rebuild the Vercel-ready project.
+
