@@ -1,18 +1,16 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 // Warm Editorial Community: the composer should feel like opening a fresh page—low pressure, specific prompts, and a clear terracotta action.
+
 import { ImagePlus, MapPin, Send, Sparkles } from "lucide-react";
+import { useState } from "react";
 import { toast } from "sonner";
-import { useApp } from "../context/AppContext";
+import { useAuth } from "../context/AuthContext";
+import { usePosts } from "../context/PostContext";
 import { Avatar } from "./Avatar";
-export function CreatePost() {
-    const { currentUser, composerDraft, setComposerDraft, publishPost } = useApp();
-    const submit = () => {
-        if (!composerDraft.trim()) {
-            toast("Start with a sentence", { description: "What caught your eye today?" });
-            return;
-        }
-        publishPost(composerDraft);
-        toast("Note shared", { description: "Your small wonder is now part of the commonplace." });
-    };
-    return _jsxs("section", { className: "composer-card", "aria-labelledby": "composer-heading", children: [_jsxs("div", { className: "composer-top", children: [_jsx(Avatar, { src: currentUser.avatar, initials: currentUser.initials, alt: currentUser.name, size: "md" }), _jsxs("div", { children: [_jsx("span", { className: "eyebrow", children: "A blank space" }), _jsx("h2", { id: "composer-heading", children: "What are you noticing?" })] })] }), _jsx("textarea", { value: composerDraft, onChange: (event) => setComposerDraft(event.target.value), placeholder: "A thought, a view, a question worth carrying...", rows: 3, "aria-label": "Write a new note" }), _jsxs("div", { className: "composer-bottom", children: [_jsxs("div", { className: "composer-tools", children: [_jsxs("button", { className: "tool-button", onClick: () => toast("Photo picker is coming soon", { description: "For now, let the words lead." }), children: [_jsx(ImagePlus, { size: 17 }), " ", _jsx("span", { children: "Photo" })] }), _jsxs("button", { className: "tool-button", onClick: () => toast("Location is coming soon", { description: "Your note can stay right where it is." }), children: [_jsx(MapPin, { size: 17 }), " ", _jsx("span", { children: "Place" })] }), _jsxs("button", { className: "tool-button", onClick: () => setComposerDraft("Today I’m making room for "), children: [_jsx(Sparkles, { size: 17 }), " ", _jsx("span", { children: "Prompt" })] })] }), _jsxs("button", { className: "primary-button compose-submit", onClick: submit, children: [_jsx(Send, { size: 15 }), " Share note"] })] })] });
+
+export default function CreatePost() {
+  const { user } = useAuth();
+  const { publishPost } = usePosts();
+  const [draft, setDraft] = useState("");
+  const submit = () => { if (!draft.trim()) { toast("Start with a sentence", { description: "What caught your eye today?" }); return; } publishPost(draft); setDraft(""); toast("Note shared", { description: "Your small wonder is now part of the commonplace." }); };
+  return <section className="composer-card" aria-labelledby="composer-heading"><div className="composer-top"><Avatar src={user.avatar} initials={user.initials} alt={user.name} size="md" /><div><span className="eyebrow">A blank space</span><h2 id="composer-heading">What are you noticing?</h2></div></div><textarea value={draft} onChange={(event) => setDraft(event.target.value)} placeholder="A thought, a view, a question worth carrying..." rows={3} aria-label="Write a new note" /><div className="composer-bottom"><div className="composer-tools"><button className="tool-button" onClick={() => toast("Photo picker is coming soon", { description: "For now, let the words lead." })}><ImagePlus size={17} /><span>Photo</span></button><button className="tool-button" onClick={() => toast("Location is coming soon", { description: "Your note can stay right where it is." })}><MapPin size={17} /><span>Place</span></button><button className="tool-button" onClick={() => setDraft("Today I’m making room for ")}><Sparkles size={17} /><span>Prompt</span></button></div><button className="primary-button compose-submit" onClick={submit}><Send size={15} /> Share note</button></div></section>;
 }
