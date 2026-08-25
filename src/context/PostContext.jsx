@@ -47,3 +47,8 @@ export function usePosts() {
   if (!value) throw new Error("usePosts must be used inside PostProvider");
   return value;
 }
+
+// Backward-compatible singular alias for consumers that import { usePost }.
+export function usePost() {
+  return usePosts();
+}

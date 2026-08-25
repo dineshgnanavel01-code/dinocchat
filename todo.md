@@ -60,3 +60,11 @@
 - [x] Verify the production build and validate the final archive contents.
 - [ ] Save a final checkpoint and deliver the updated project version.
 
+
+## PostContext export repair
+
+- [x] Inspect `src/context/PostContext.jsx` exports and all `usePost` imports.
+- [x] Restore a compatible named export without breaking the existing `usePosts` export.
+- [x] Verify the production build and Home route in the browser.
+- [ ] Save a stable checkpoint and report the corrected version.
+
