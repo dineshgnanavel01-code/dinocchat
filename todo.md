@@ -129,3 +129,10 @@
 - [ ] Verify all routes, contexts, branding, and interactive output page behavior.
 - [ ] Run desktop/mobile build verification and save a final checkpoint.
 
+
+## Uploaded Vite files verification
+
+- [ ] Compare uploaded package, lockfile, Vite config, HTML, ESLint config, and README with the Dinoc project.
+- [ ] Confirm the requested source tree remains the only application source addition.
+- [ ] Verify the output page and Vercel build settings without adding unnecessary files.
+
