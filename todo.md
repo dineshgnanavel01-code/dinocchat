@@ -51,3 +51,12 @@
 - [ ] Refresh the output page and chat copy for the Dina Chat identity.
 - [ ] Preserve and verify the exact JSX-only source tree and client-side interactions.
 - [ ] Rebuild and package the Dina Chat source-only ZIP.
+
+## Dinoc exact structure alignment
+
+- [x] Confirm that `index.css` is required by `main.jsx` and preserve it in the runnable project; no local asset files are referenced.
+- [x] Inspect current source tree and determine that styling depends on `src/index.css`.
+- [x] Align the archive root to `Dinoc/src/` with the requested JSX files only; embed the required global CSS in `main.jsx`.
+- [x] Verify the production build and validate the final archive contents.
+- [ ] Save a final checkpoint and deliver the updated project version.
+
