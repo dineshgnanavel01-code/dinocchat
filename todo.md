@@ -219,3 +219,10 @@
 - [ ] Fix the sidebar, top navigation, right rail, and mobile navigation without blocking scrollable content.
 - [ ] Verify output and synchronize the final Vercel-ready code.
 
+
+## Explore empty-space correction
+
+- [ ] Inspect Explore-specific width and max-width rules.
+- [ ] Expand Explore content across the available fixed-shell workspace.
+- [ ] Verify desktop/mobile Explore output and rebuild before checkpointing.
+

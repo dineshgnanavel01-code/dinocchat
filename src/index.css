@@ -732,3 +732,14 @@ body { background: var(--reference-canvas); color: var(--reference-ink); }
   .route-content { width: 100%; min-width: 0; margin: 0; }
   .page-grid { width: 100%; max-width: none; margin: 0; padding-right: 0; padding-left: 0; }
 }
+
+/* Explore full-width correction: this page has no right rail, so it should use the entire route workspace. */
+@media (min-width: 801px) {
+  .page-grid.single-page-grid:has(.explore-page) { max-width: none; }
+  .explore-page { width: 100%; max-width: none; }
+  .explore-page .post-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+}
+@media (max-width: 800px) {
+  .page-grid.single-page-grid:has(.explore-page), .explore-page { width: 100%; max-width: none; }
+  .explore-page .post-list { grid-template-columns: minmax(0, 1fr); }
+}
