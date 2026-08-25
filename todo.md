@@ -12,3 +12,6 @@
 - [x] Reorganize the app into the expanded JSX-only components, pages, and context structure.
 - [x] Add Vercel SPA routing configuration and a deployment-ready README section.
 - [x] Create and validate a downloadable ZIP containing the requested project structure.
+- [x] Inspect the downloaded package dependency metadata and Vite entry configuration for the missing `wouter` import.
+- [x] Repair the package manifest or provide the exact fresh-install command needed for local Vite.
+- [x] Verify `wouter` resolution with a clean install and production build.

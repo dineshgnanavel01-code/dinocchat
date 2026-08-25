@@ -53,11 +53,16 @@ social-media-app/
 ## Run locally
 
 ```bash
+# npm workflow (Windows-friendly)
+npm install
+npm run dev
+
+# or use pnpm
 pnpm install
 pnpm dev
 ```
 
-Create a production build with `pnpm build`, or preview the build with `pnpm preview`.
+Create a production build with `npm run build` or `pnpm build`, and preview it with `npm run preview` or `pnpm preview`.
 
 ## Routes
 
@@ -71,4 +76,4 @@ The data layer is intentionally mock data in `src/data/mockData.js`; no backend 
 
 ## Vercel preparation
 
-`vercel.json` includes a single-page-app rewrite so direct visits to Wouter routes resolve to `index.html`. To deploy with Vercel, import this project or upload the ZIP, use the default Vite build settings, and set the output directory to `dist`. Manus hosting remains the supported managed option if you want deployment and custom domains without a separate provider.
+`vercel.json` includes a single-page-app rewrite so direct visits to Wouter routes resolve to `index.html`. To run locally, install dependencies first with `npm install` or `pnpm install`; this is required because `wouter`, React, Vite, and the icon packages are intentionally not bundled in the ZIP. To deploy with Vercel, import this project or upload the ZIP, use the default Vite build settings, and set the output directory to `dist`. Manus hosting remains the supported managed option if you want deployment and custom domains without a separate provider.
