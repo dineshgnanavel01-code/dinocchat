@@ -106,3 +106,11 @@
 - [x] Confirm all requested JSX files, `mockData.js`, `index.css`, Vite files, and README are present.
 - [x] Verify the build and corrected PostContext exports, then save a checkpoint.
 
+
+## Reference-matched Instagram-style redesign
+
+- [x] Record the attached image as the ground-truth visual specification.
+- [x] Restyle the shell, stories row, feed cards, profile rail, and responsive navigation to match the reference.
+- [x] Preserve Dina Chat branding and all existing local interactions.
+- [x] Verify desktop output and complete a successful production build; mobile rules remain responsive.
+

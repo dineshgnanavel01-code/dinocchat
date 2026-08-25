@@ -539,3 +539,68 @@ img { display: block; max-width: 100%; }
 .composer-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: -4px 0 10px; color: var(--faded); font-size: 9px; }
 .composer-meta button { display: inline-flex; align-items: center; gap: 5px; border: 0; color: var(--moss); background: transparent; font-size: 9px; font-weight: 800; cursor: pointer; }
 .tool-button.is-active { color: var(--terracotta-dark); background: var(--butter); }
+
+/* Reference match: Instagram-inspired light social dashboard with a cool canvas, white shell, compact stories, coral-pink actions, and responsive feed cards. */
+:root {
+  --reference-canvas: #e8edf7;
+  --reference-workspace: #f7f7f8;
+  --reference-card: #ffffff;
+  --reference-ink: #17181c;
+  --reference-muted: #858993;
+  --reference-line: #ececf0;
+  --reference-coral: #ff6a20;
+  --reference-pink: #e70073;
+}
+
+body { background: var(--reference-canvas); color: var(--reference-ink); }
+.app-frame { width: min(1480px, calc(100% - 64px)); min-height: calc(100vh - 64px); margin: 32px auto; overflow: hidden; border: 1px solid rgba(255,255,255,.85); border-radius: 32px; background: var(--reference-card); box-shadow: 0 18px 50px rgba(54,58,78,.11); }
+.topbar { background: rgba(255,255,255,.96); border-bottom-color: var(--reference-line); }
+.topbar-inner { max-width: none; padding-left: 28px; padding-right: 28px; }
+.brand-symbol { color: #fff; background: linear-gradient(145deg, var(--reference-coral), var(--reference-pink)); box-shadow: 0 8px 18px rgba(231,0,115,.2); }
+.brand-wordmark { color: var(--reference-ink); }
+.search-field { width: min(400px, 35vw); border: 0; border-radius: 999px; background: #f5f5f7; }
+.search-field:focus-within { border-color: #ffd0df; background: #fff; }
+.app-body { background: var(--reference-workspace); }
+.sidebar { flex-basis: 280px; background: #fff; border-right-color: var(--reference-line); }
+.sidebar-profile { border-bottom-color: var(--reference-line); }
+.side-nav-link { border-radius: 14px; color: #4a4d55; }
+.side-nav-link:hover, .side-nav-link.is-active { color: var(--reference-coral); background: #fff2ed; }
+.share-button, .primary-button { background: linear-gradient(100deg, var(--reference-coral), var(--reference-pink)); box-shadow: 0 10px 22px rgba(231,0,115,.18); }
+.page-grid { width: min(1240px, calc(100% - 64px)); gap: 28px; padding-top: 30px; }
+.home-grid { grid-template-columns: minmax(0, 1fr) 270px; }
+.page-intro h1 { max-width: 700px; font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-size: clamp(32px, 4vw, 44px); letter-spacing: -.06em; }
+.page-subtitle, .eyebrow { color: var(--reference-muted); }
+.city-strip, .feed-toolbar, .feed-context { background: var(--reference-card); border-color: var(--reference-line); }
+.stories-card, .composer-card, .post-card, .right-rail-card { border: 1px solid var(--reference-line); border-radius: 22px; background: var(--reference-card); box-shadow: 0 8px 26px rgba(47,51,67,.055); }
+.stories-card { padding: 22px 24px; }
+.stories-scroll { gap: 22px; }
+.story-image { padding: 3px; border: 3px solid #ef3d7d; background: #fff; }
+.story-image.has-new { border-color: var(--reference-pink); }
+.story-image.is-own { border-color: #dfe1e7; }
+.story-add { background: var(--reference-pink); border-color: #fff; }
+.composer-card { margin-top: 24px; }
+.post-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.post-card { overflow: hidden; padding: 22px 20px 18px; }
+.post-card .post-image { max-height: none; aspect-ratio: 1.32; border-radius: 15px; object-fit: cover; }
+.post-copy { font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; font-size: 15px; line-height: 1.5; }
+.post-action:hover, .post-action.is-liked, .save-button.is-saved { color: var(--reference-pink); }
+.right-sidebar { padding-top: 10px; }
+
+@media (max-width: 1080px) {
+  .app-frame { width: min(100% - 28px, 980px); margin: 14px auto; border-radius: 24px; }
+  .home-grid { grid-template-columns: 1fr; }
+  .right-sidebar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+}
+@media (max-width: 720px) {
+  .app-frame { width: 100%; min-height: 100vh; margin: 0; border: 0; border-radius: 0; box-shadow: none; }
+  .topbar-inner { padding: 13px 16px; }
+  .topbar .search-field { display: none; }
+  .sidebar { display: none; }
+  .app-body { padding-bottom: 76px; }
+  .page-grid { width: 100%; gap: 18px; padding: 22px 14px 30px; }
+  .page-intro h1 { font-size: 34px; }
+  .stories-card { padding: 18px 14px; border-radius: 18px; }
+  .stories-scroll { gap: 15px; }
+  .post-list { grid-template-columns: 1fr; gap: 16px; }
+  .right-sidebar { display: block; }
+}

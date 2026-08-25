@@ -84,3 +84,11 @@ All frontend interactions should work with local React state: likes, saves, foll
 
 ### Brand Voice
 Use friendly, direct microcopy with occasional Indian conversational cues, such as “What’s happening in your corner?” and “Share a little moment.” Avoid caricature, excessive slang, and decorative cultural references that do not improve usability.
+
+## Reference Ground Truth: Instagram-style dashboard
+
+The attached reference image overrides earlier visual directions for this redesign. Match its light, airy social-dashboard composition: a pale blue-gray outer canvas, a large white rounded application frame, a slim left identity/navigation rail, a soft-gray main workspace, a wide search field, a bright pink-orange create action, a horizontal Stories row with circular avatar rings, and a dense multi-column Feed of white rounded photo cards. Keep spacing generous, borders subtle, shadows soft, and controls icon-led. Preserve Dina Chat naming and the existing functional interactions; use the reference for composition, surface treatment, hierarchy, and density rather than copying the Instagram trademark wordmark.
+
+### Style Decisions
+
+Use white cards on a #f7f7f8 workspace with a #e8edf7 outer canvas, coral-to-pink action accents, charcoal text, and cool gray utility text. The left rail remains persistent on desktop and collapses to mobile navigation. Story rings use a warm coral/magenta accent. Feed cards should feel photographic and social, with compact metadata and familiar reaction controls. Avoid purple gradients, heavy ornament, or oversized editorial headings in this reference-matched pass.
