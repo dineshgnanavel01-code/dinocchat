@@ -234,3 +234,11 @@
 - [x] Enable smooth scrolling and remove unnecessary top, bottom, left, and right padding.
 - [x] Verify desktop/mobile output and rebuild before checkpointing.
 
+
+## Final Dinoc ZIP delivery
+
+- [ ] Verify the existing feature coverage and Dinoc branding.
+- [ ] Confirm responsive interactions and validations across the major routes.
+- [ ] Build a clean ZIP and capture the output page.
+- [ ] Deliver the archive and output preview.
+
