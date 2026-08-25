@@ -1,0 +1,14 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+// Warm Editorial Community: auth is an invitation into a shared journal, balancing editorial warmth with clear, confident utility.
+import { ArrowRight, Mail, Sun } from "lucide-react";
+import { useState } from "react";
+import { Link } from "wouter";
+import { toast } from "sonner";
+export default function Auth() {
+    const [email, setEmail] = useState("");
+    const submit = () => { if (!email.includes("@")) {
+        toast("Enter a valid email", { description: "We’ll use it to keep your notes connected." });
+        return;
+    } toast("Check your inbox", { description: "A sign-in link would arrive here in the full product." }); };
+    return _jsxs("main", { className: "auth-page", children: [_jsxs("div", { className: "auth-art", children: [_jsxs("div", { className: "auth-art-copy", children: [_jsx("span", { className: "brand-symbol large-symbol", children: _jsx(Sun, { size: 25, strokeWidth: 2.2 }) }), _jsx("span", { className: "eyebrow", children: "A social journal" }), _jsxs("h1", { children: ["Notice more.", _jsx("br", {}), _jsx("em", { children: "Share gently." })] }), _jsx("p", { children: "A slower place for the things you want to remember, and the people you want to tell." })] }), _jsx("span", { className: "auth-art-caption", children: "commonplace \u00B7 for the curious" })] }), _jsxs("section", { className: "auth-panel", children: [_jsxs(Link, { href: "/", className: "auth-wordmark", children: [_jsx("span", { className: "brand-symbol", children: _jsx(Sun, { size: 18 }) }), _jsx("span", { className: "brand-wordmark", children: "commonplace" })] }), _jsxs("div", { className: "auth-form", children: [_jsx("span", { className: "eyebrow", children: "Come on in" }), _jsx("h2", { children: "Your corner is waiting." }), _jsx("p", { children: "Sign in with your email to keep your notes, people, and prompts close." }), _jsxs("label", { children: ["Email address", _jsxs("div", { className: "auth-input", children: [_jsx(Mail, { size: 17 }), _jsx("input", { value: email, onChange: (event) => setEmail(event.target.value), placeholder: "you@example.com", type: "email" })] })] }), _jsxs("button", { className: "primary-button auth-submit", onClick: submit, children: ["Continue with email ", _jsx(ArrowRight, { size: 16 })] }), _jsx("div", { className: "auth-or", children: _jsx("span", { children: "or" }) }), _jsx("button", { className: "secondary-button auth-secondary", onClick: () => toast("Google sign-in is coming soon"), children: "Continue with Google" }), _jsxs("small", { className: "auth-terms", children: ["By continuing, you agree to our ", _jsx("button", { onClick: () => toast("Terms are coming soon"), children: "community guidelines" }), "."] })] }), _jsx(Link, { href: "/", className: "auth-back", children: "\u2190 Browse the commonplace" })] })] });
+}
