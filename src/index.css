@@ -946,3 +946,34 @@ button:active, .sidebar-nav a:active, .mobile-nav a:active { transform: scale(.9
   html { scroll-behavior: auto; }
   .post-card, .stories-card, .composer-card, .right-rail-card, .settings-card, .profile-card { animation: none; }
 }
+
+/* Alternate India-inspired sidebar: peacock teal replaces the previous cobalt background. */
+:root {
+  --dinoc-peacock: #155b57;
+  --dinoc-peacock-deep: #0c3f3e;
+  --dinoc-saffron: #f2b84b;
+}
+@media (min-width: 801px) {
+  .sidebar {
+    background: var(--dinoc-peacock);
+    box-shadow: 10px 0 34px rgba(12, 63, 62, .2);
+  }
+  .sidebar::after {
+    border-color: rgba(242, 184, 75, .32);
+    box-shadow: -28px -18px 0 -20px rgba(242, 184, 75, .65);
+  }
+  .sidebar-nav a:hover,
+  .sidebar-nav a:focus-visible {
+    color: var(--dinoc-peacock-deep) !important;
+    background: var(--dinoc-saffron) !important;
+  }
+  .sidebar-nav a:hover span,
+  .sidebar-nav a:focus-visible span,
+  .sidebar-nav a:hover svg,
+  .sidebar-nav a:focus-visible svg { color: var(--dinoc-peacock-deep) !important; }
+  .sidebar-nav a.is-active,
+  .sidebar-nav a.is-active span,
+  .sidebar-nav a.is-active svg { color: var(--dinoc-peacock-deep) !important; }
+  .sidebar .primary-button { background: linear-gradient(100deg, #f07c51, #ec3d93); color: #fff; }
+}
+.mobile-drawer { background: var(--dinoc-peacock); }
