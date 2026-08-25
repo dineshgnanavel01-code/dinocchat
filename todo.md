@@ -288,3 +288,10 @@
 - [ ] Hide or refine scrollbar chrome, enable smooth scrolling, and add subtle animations.
 - [ ] Build, verify output, and push the corrected project to GitHub.
 
+
+## Alternate sidebar background color
+
+- [x] Inspect current sidebar background and contrast rules.
+- [x] Apply a distinct sidebar background color with readable navigation states.
+- [x] Verify the desktop/mobile sidebar and rebuild before checkpointing.
+
