@@ -1,1 +1,15 @@
-import{useState}from'react';import{Link,useNavigate}from'react-router-dom';import{useAuth}from'../context/AuthContext';export default function Login(){const{login}=useAuth();const nav=useNavigate();const[email,setEmail]=useState('dinesh@example.com'),[password,setPassword]=useState('123456'),[err,setErr]=useState('');const submit=e=>{e.preventDefault();try{login(email,password);nav('/')}catch(x){setErr(x.message)}};return <Auth title="Welcome back"><form onSubmit={submit} className="space-y-4"><input required type="email" value={email} onChange={e=>setEmail(e.target.value)} placeholder="Email" className="input"/><input required type="password" value={password} onChange={e=>setPassword(e.target.value)} placeholder="Password" className="input"/>{err&&<p className="text-sm text-red-500">{err}</p>}<button className="btn">Login</button><p className="text-center text-sm">No account? <Link className="font-bold text-violet-600" to="/signup">Sign up</Link></p></form></Auth>};function Auth({title,children}){return <main className="grid min-h-screen place-items-center bg-slate-50 p-4 dark:bg-slate-950"><div className="w-full max-w-md rounded-3xl bg-white p-7 shadow-xl dark:bg-slate-900"><h1 className="mb-1 text-3xl font-black text-violet-600">Dinoc</h1><h2 className="mb-6 text-xl font-bold">{title}</h2>{children}</div></main>}
+// Dinoc India Edition: login is a warm, direct doorway into a lively local social space.
+
+import { ArrowRight, Mail, Sun } from "lucide-react";
+import { useState } from "react";
+import { Link, useLocation } from "wouter";
+import { toast } from "sonner";
+import { useAuth } from "../context/AuthContext";
+
+export default function Login() {
+  const [, setLocation] = useLocation();
+  const { login } = useAuth();
+  const [email, setEmail] = useState("");
+  const submit = (event) => { event.preventDefault(); if (!email.trim()) return; login(email.trim()); toast("Welcome back to Dinoc"); setLocation("/"); };
+  return <main className="auth-page"><div className="auth-panel"><div className="auth-brand"><span className="brand-symbol"><Sun size={18} /></span><span className="brand-wordmark">Dinoc</span></div><span className="eyebrow">Your people are here</span><h1>What’s happening in your corner?</h1><p className="auth-copy">A friendly place for city notes, shared moments, and the conversations that make a day feel closer.</p><form className="auth-form" onSubmit={submit}><label>Email address<div className="auth-input"><Mail size={16} /><input type="email" value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" required /></div></label><button className="primary-button" type="submit">Enter Dinoc <ArrowRight size={16} /></button></form><p className="auth-switch">New here? <Link href="/signup">Create your corner</Link></p></div><div className="auth-aside"><span className="eyebrow">A small city signal</span><blockquote>“Everyday life is full of stories when we make room to notice one another.”</blockquote><span>— Dinoc community</span></div></main>;
+}

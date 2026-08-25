@@ -1,17 +1,5 @@
-import { Navigate, Outlet } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
-
-export default function ProtectedRoute() {
-  const { user } = useAuth();
-
-  if (!user) {
-    return (
-      <Navigate
-        to="/login"
-        replace
-      />
-    );
-  }
-
-  return <Outlet />;
-}
+import { jsx as _jsx } from "react/jsx-runtime";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
+createRoot(document.getElementById("root")).render(_jsx(App, {}));

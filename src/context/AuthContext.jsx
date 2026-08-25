@@ -1,147 +1,43 @@
-import {
-  createContext,
-  useContext,
-  useState,
-} from "react";
+// Dinoc India Edition: authentication is a lightweight local doorway with enough state for a believable social app demo.
+
+import { createContext, useContext, useMemo, useState } from "react";
+import { currentUser } from "../data/mockData";
 
 const AuthContext = createContext(null);
 
+function loadSession() {
+  if (typeof window === "undefined") return true;
+  return window.localStorage.getItem("dinoc-session") !== "signed-out";
+}
+
 export function AuthProvider({ children }) {
-  const [user, setUser] = useState(() => {
-    try {
-      const savedUser =
-        localStorage.getItem("dinoc_user");
+  const [user, setUser] = useState(currentUser);
+  const [isAuthenticated, setIsAuthenticated] = useState(loadSession);
 
-      return savedUser
-        ? JSON.parse(savedUser)
-        : null;
-    } catch {
-      localStorage.removeItem("dinoc_user");
-      return null;
-    }
-  });
-
-  // SIGN UP
-  const signup = async (name) => {
-    if (!name || !name.trim()) {
-      throw new Error("Please enter your name.");
-    }
-
-    const cleanName = name.trim();
-
-    const username = cleanName
-      .toLowerCase()
-      .replace(/\s+/g, "");
-
-    const newUser = {
-      id: Date.now().toString(),
-      name: cleanName,
-      username,
-      email: `${username}@dinoc.app`,
-      avatar: `https://ui-avatars.com/api/?name=${encodeURIComponent(
-        cleanName
-      )}&background=7c3aed&color=fff`,
-    };
-
-    localStorage.setItem(
-      "dinoc_account",
-      JSON.stringify(newUser)
-    );
-
-    localStorage.setItem(
-      "dinoc_user",
-      JSON.stringify(newUser)
-    );
-
-    setUser(newUser);
-
-    return newUser;
+  const login = (emailOrDetails) => {
+    const email = typeof emailOrDetails === "string" ? emailOrDetails : emailOrDetails?.email;
+    setUser((existing) => ({ ...existing, email: email || existing.email }));
+    setIsAuthenticated(true);
+    window.localStorage?.setItem("dinoc-session", "signed-in");
   };
 
-  // LOGIN
-  const login = async (name) => {
-    if (!name || !name.trim()) {
-      throw new Error("Please enter your name.");
-    }
-
-    const savedAccount =
-      localStorage.getItem("dinoc_account");
-
-    if (!savedAccount) {
-      throw new Error(
-        "No account found. Please create an account first."
-      );
-    }
-
-    const account = JSON.parse(savedAccount);
-
-    const enteredName = name
-      .trim()
-      .toLowerCase();
-
-    const accountName = account.name
-      .trim()
-      .toLowerCase();
-
-    const accountUsername = account.username
-      .trim()
-      .toLowerCase();
-
-    if (
-      enteredName !== accountName &&
-      enteredName !== accountUsername
-    ) {
-      throw new Error(
-        "Account not found. Please check your name."
-      );
-    }
-
-    const loggedInUser = {
-      id: account.id,
-      name: account.name,
-      username: account.username,
-      email: account.email,
-      avatar: account.avatar,
-    };
-
-    localStorage.setItem(
-      "dinoc_user",
-      JSON.stringify(loggedInUser)
-    );
-
-    setUser(loggedInUser);
-
-    return loggedInUser;
+  const signup = (nameOrDetails, email) => {
+    const details = typeof nameOrDetails === "object" ? nameOrDetails : { name: nameOrDetails, email };
+    const nextName = details.name?.trim() || currentUser.name;
+    setUser((existing) => ({ ...existing, name: nextName, handle: nextName.toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 18) || existing.handle, email: details.email || existing.email }));
+    setIsAuthenticated(true);
+    window.localStorage?.setItem("dinoc-session", "signed-in");
   };
 
-  // LOGOUT
-  const logout = () => {
-    localStorage.removeItem("dinoc_user");
-    setUser(null);
-  };
+  const updateProfile = (updates) => setUser((existing) => ({ ...existing, ...updates }));
+  const logout = () => { setIsAuthenticated(false); window.localStorage?.setItem("dinoc-session", "signed-out"); };
 
-  return (
-    <AuthContext.Provider
-      value={{
-        user,
-        signup,
-        login,
-        logout,
-      }}
-    >
-      {children}
-    </AuthContext.Provider>
-  );
+  const value = useMemo(() => ({ user, isAuthenticated, login, signup, updateProfile, logout }), [user, isAuthenticated]);
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
 export function useAuth() {
-  const context = useContext(AuthContext);
-
-  if (!context) {
-    throw new Error(
-      "useAuth() must be used inside <AuthProvider>"
-    );
-  }
-
-  return context;
+  const value = useContext(AuthContext);
+  if (!value) throw new Error("useAuth must be used inside AuthProvider");
+  return value;
 }

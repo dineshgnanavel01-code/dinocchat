@@ -1,73 +1,28 @@
-import { Sparkles } from "lucide-react";
+// Dinoc India Edition: the home page is a lively social adda for city notes, stories, and easy-to-scan conversations.
 
-import StoryBar from "../components/StoryBar";
+import { ArrowUpRight, Filter, Flame, SlidersHorizontal, Sparkles, Users } from "lucide-react";
+import { useMemo, useState } from "react";
+import { toast } from "sonner";
 import CreatePost from "../components/CreatePost";
 import PostCard from "../components/PostCard";
-import { useApp } from "../context/AppContext";
+import RightSidebar from "../components/RightSidebar";
+import StoryBar from "../components/StoryBar";
+import CommentSection from "../components/CommentSection";
+import Modal from "../components/Modal";
+import { usePosts } from "../context/PostContext";
 
 export default function Home() {
-  const { posts = [] } = useApp();
-
-  return (
-    <main className="min-h-screen bg-slate-50 px-3 py-5 dark:bg-slate-950 sm:px-5 lg:px-8">
-      <div className="mx-auto max-w-full">
-
-        {/* Welcome Header */}
-        <section className="mb-5 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">
-          <div className="flex items-center gap-3">
-            <div className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-violet-600 text-white shadow-lg shadow-violet-500/20">
-              <Sparkles size={21} />
-            </div>
-
-            <div>
-              <h1 className="text-lg font-bold text-slate-900 dark:text-white">
-                Welcome back 👋
-              </h1>
-
-              <p className="text-sm text-slate-500 dark:text-slate-400">
-                See what's happening in your community.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Stories */}
-        <section className="mb-5">
-          <StoryBar />
-        </section>
-
-        {/* Create Post */}
-        <section className="mb-5">
-          <CreatePost />
-        </section>
-
-        {/* Feed */}
-        <section className="space-y-5">
-          {posts.length > 0 ? (
-            posts.map((post) => (
-              <PostCard
-                key={post.id}
-                post={post}
-              />
-            ))
-          ) : (
-            <div className="rounded-3xl border border-slate-200 bg-white px-6 py-12 text-center shadow-sm dark:border-slate-800 dark:bg-slate-900">
-              <div className="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full bg-violet-100 text-violet-600 dark:bg-violet-500/10 dark:text-violet-400">
-                <Sparkles size={24} />
-              </div>
-
-              <h2 className="font-bold text-slate-900 dark:text-white">
-                No posts yet
-              </h2>
-
-              <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
-                Create your first post and start sharing.
-              </p>
-            </div>
-          )}
-        </section>
-
-      </div>
-    </main>
-  );
+  const { posts, following } = usePosts();
+  const [commentPost, setCommentPost] = useState(null);
+  const [activeTab, setActiveTab] = useState("For you");
+  const [sortMode, setSortMode] = useState("Fresh");
+  const visiblePosts = useMemo(() => {
+    const filtered = activeTab === "Following" && following.length ? posts.filter((post) => following.includes(post.author.id)) : posts;
+    return [...filtered].sort((a, b) => sortMode === "Popular" ? b.likes - a.likes : 0);
+  }, [activeTab, following, posts, sortMode]);
+  const changeTab = (tab) => {
+    setActiveTab(tab);
+    if (tab === "Following" && !following.length) toast("Your following feed is ready", { description: "Follow people from the right rail to personalize it." });
+  };
+  return <div className="page-grid home-grid"><main className="feed-column"><div className="home-kicker"><span><Flame size={14} /> Your daily scroll</span><span className="live-pill"><i></i> Live in your city</span></div><div className="page-intro"><div><span className="eyebrow">Bengaluru · Monday, September 14</span><h1>What’s happening in your corner?</h1><p className="page-subtitle">A little space for the moments, people, and ideas worth passing on.</p></div><button className="icon-button filter-button" onClick={() => toast("Feed preferences", { description: "Your home feed is tuned for thoughtful local posts." })} aria-label="Feed preferences"><SlidersHorizontal size={18} /></button></div><div className="city-strip"><span><Sparkles size={15} /> 1,248 people sharing today</span><span><Users size={15} /> 86 near you</span><button onClick={() => toast("Local circle", { description: "City circles will be available soon." })}>Explore circles <ArrowUpRight size={14} /></button></div><StoryBar /><CreatePost /><div className="feed-toolbar"><div className="feed-tabs">{["For you", "Following", "Latest"].map((tab) => <button key={tab} className={`feed-tab ${activeTab === tab ? "is-active" : ""}`} onClick={() => changeTab(tab)}>{tab}</button>)}</div><button className="sort-button" onClick={() => setSortMode((mode) => mode === "Fresh" ? "Popular" : "Fresh")} aria-label="Change feed sorting">{sortMode} <Filter size={14} /></button></div><div className="feed-context"><strong>{activeTab === "For you" ? "Made for your scroll" : activeTab === "Following" ? "People you chose" : "Fresh from the city"}</strong><span>{visiblePosts.length} posts · tap a reaction to shape your feed</span></div><div className="post-list">{visiblePosts.map((post) => <PostCard key={post.id} post={post} onOpenComments={setCommentPost} />)}</div>{visiblePosts.length === 0 && <div className="empty-note"><Sparkles size={18} /><strong>Your circle is still quiet.</strong><span>Follow a few people and their notes will appear here.</span></div>}</main><RightSidebar /><Modal open={Boolean(commentPost)} onClose={() => setCommentPost(null)} title="Add to the conversation">{commentPost && <CommentSection postId={commentPost.id} />}</Modal></div>;
 }
