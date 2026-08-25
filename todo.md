@@ -152,3 +152,10 @@
 - [ ] Preserve local replies, unread clearing, and existing JSX-only structure.
 - [ ] Verify desktop/mobile chat output and save a checkpoint.
 
+
+## Clean Dinoc project package
+
+- [ ] Confirm the ZIP contains only `index.html`, `package.json`, `vite.config.js`, and the requested `src` tree.
+- [ ] Remove development-only files from the deliverable archive without changing the working project.
+- [ ] Build the cleaned package and validate every requested file.
+- [ ] Capture the output page and deliver the ZIP plus preview.

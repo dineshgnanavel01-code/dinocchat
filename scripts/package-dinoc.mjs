@@ -5,10 +5,12 @@ import { fileURLToPath } from "node:url";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const source = path.join(root, "src");
 const staging = "/home/ubuntu/dinoc-package/Dinoc";
+const rootFiles = ["index.html", "package.json", "vite.config.js"];
 const archive = "/home/ubuntu/dinoc-exact-jsx-structure.zip";
 
 fs.rmSync(path.dirname(staging), { recursive: true, force: true });
 fs.mkdirSync(staging, { recursive: true });
+for (const file of rootFiles) fs.copyFileSync(path.join(root, file), path.join(staging, file));
 
 for (const directory of ["components", "pages", "context", "data"]) {
   fs.cpSync(path.join(source, directory), path.join(staging, "src", directory), { recursive: true });
