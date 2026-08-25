@@ -48,7 +48,7 @@ social-media-app/
 └── README.md
 ```
 
-`Avatar.jsx` is kept as a small supporting primitive for the existing visual system. The application contains no TypeScript source files.
+The application contains no TypeScript source files; the requested component list is the complete JSX component set.
 
 ## Run locally
 

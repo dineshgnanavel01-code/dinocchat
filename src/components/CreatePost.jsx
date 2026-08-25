@@ -5,7 +5,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { useAuth } from "../context/AuthContext";
 import { usePosts } from "../context/PostContext";
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Navbar";
 
 export default function CreatePost() {
   const { user } = useAuth();

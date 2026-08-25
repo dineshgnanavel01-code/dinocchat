@@ -4,7 +4,7 @@ import { ArrowUpRight, Check, Plus } from "lucide-react";
 import { toast } from "sonner";
 import { peopleToFollow, trendingTopics } from "../data/mockData";
 import { usePosts } from "../context/PostContext";
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Navbar";
 
 export default function RightSidebar() {
   const { following, followUser } = usePosts();

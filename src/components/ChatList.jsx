@@ -2,7 +2,7 @@
 
 import { Search } from "lucide-react";
 import { useMessages } from "../context/MessageContext";
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Navbar";
 
 export default function ChatList() {
   const { conversations, activeConversationId, setActiveConversationId } = useMessages();

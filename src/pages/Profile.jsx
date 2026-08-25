@@ -4,7 +4,7 @@ import { Bookmark, Grid2X2, Link as LinkIcon, MapPin, MoreHorizontal, Pencil } f
 import { toast } from "sonner";
 import { useAuth } from "../context/AuthContext";
 import { usePosts } from "../context/PostContext";
-import { Avatar } from "../components/Avatar";
+import { Avatar } from "../components/Navbar";
 import PostCard from "../components/PostCard";
 
 export default function Profile() {

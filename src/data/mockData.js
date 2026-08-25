@@ -1,17 +1,17 @@
 // Warm Editorial Community: the feed is treated like a living journal, with quiet metadata, generous breathing room, and terracotta moments.
 export const currentUser = {
     id: "u0",
-    name: "Mara Ellison",
-    handle: "maraellison",
-    role: "Editor & collector of small wonders",
-    avatar: "https://i.pravatar.cc/160?img=47",
-    initials: "ME",
+    name: "Dinesh",
+    handle: "dinesh",
+    role: "Builder & collector of small wonders",
+    avatar: "https://i.pravatar.cc/160?img=12",
+    initials: "DN",
     location: "Portland, OR",
     following: 248,
     followers: 1840,
 };
 export const stories = [
-    { id: "s0", name: "Your story", avatar: currentUser.avatar, initials: "ME", isOwn: true, hasNew: false, image: "/manus-storage/commonplace-studio-corner_f544829e.jpg" },
+    { id: "s0", name: "Your story", avatar: currentUser.avatar, initials: "DN", isOwn: true, hasNew: false, image: "/manus-storage/commonplace-studio-corner_f544829e.jpg" },
     { id: "s1", name: "Noor A.", avatar: "https://i.pravatar.cc/160?img=32", initials: "NA", hasNew: true, image: "/manus-storage/commonplace-coastal-walk_37abc409.jpg" },
     { id: "s2", name: "Theo Kim", avatar: "https://i.pravatar.cc/160?img=12", initials: "TK", hasNew: true, image: "/manus-storage/commonplace-linen-table_1d0b11fe.jpg" },
     { id: "s3", name: "June Park", avatar: "https://i.pravatar.cc/160?img=5", initials: "JP", hasNew: true, image: "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=500&q=80" },
@@ -35,7 +35,7 @@ export const posts = [
     },
     {
         id: "p2",
-        author: { name: "Mara Ellison", handle: "maraellison", avatar: currentUser.avatar, initials: "ME" },
+        author: { name: "Dinesh", handle: "dinesh", avatar: currentUser.avatar, initials: "DN" },
         time: "2 hr",
         location: "At my desk",
         text: "Three things I am carrying into this week: leave a little white space, ask better questions, and keep the good pen nearby.",

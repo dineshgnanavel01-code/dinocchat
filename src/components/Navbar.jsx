@@ -3,7 +3,12 @@
 import { Bell, ChevronDown, Menu, Search, Sun } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { useAuth } from "../context/AuthContext";
-import { Avatar } from "./Avatar";
+
+const avatarSizes = { sm: "avatar-size-sm", md: "avatar-size-md", lg: "avatar-size-lg", xl: "avatar-size-xl" };
+
+export function Avatar({ src, initials, alt, size = "md", ring = false, online = false, className = "" }) {
+  return <span className={`relative inline-flex shrink-0 ${className}`}><span className={`avatar-shell ${avatarSizes[size] || avatarSizes.md} ${ring ? "avatar-ring" : ""}`}>{src ? <img src={src} alt={alt} /> : <span aria-hidden="true">{initials}</span>}</span>{online && <span className="status-dot" aria-label="Online" />}</span>;
+}
 
 export default function Navbar({ onMenuClick }) {
   const [location] = useLocation();

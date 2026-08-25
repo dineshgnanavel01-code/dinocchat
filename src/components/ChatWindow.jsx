@@ -4,7 +4,7 @@ import { ArrowLeft, MoreHorizontal, Paperclip, Send, Smile } from "lucide-react"
 import { useState } from "react";
 import { toast } from "sonner";
 import { useMessages } from "../context/MessageContext";
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Navbar";
 
 export default function ChatWindow({ onBack }) {
   const { activeConversation, messages, sendMessage } = useMessages();

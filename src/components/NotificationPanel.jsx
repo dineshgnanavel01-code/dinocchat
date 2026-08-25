@@ -2,7 +2,7 @@
 
 import { Bell, Check, Heart, MessageCircle, UserPlus } from "lucide-react";
 import { notifications } from "../data/mockData";
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Navbar";
 
 const icons = { like: Heart, follow: UserPlus, comment: MessageCircle };
 

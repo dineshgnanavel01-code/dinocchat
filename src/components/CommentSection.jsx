@@ -4,7 +4,7 @@ import { Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { currentUser } from "../data/mockData";
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Navbar";
 
 const seedComments = [{ id: "cm1", name: "June Park", avatar: "https://i.pravatar.cc/160?img=5", text: "This feels like a deep breath." }, { id: "cm2", name: "Theo Kim", avatar: "https://i.pravatar.cc/160?img=12", text: "Keeping this one for the next walk." }];
 

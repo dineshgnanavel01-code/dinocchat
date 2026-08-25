@@ -3,7 +3,7 @@
 import { Bookmark, Heart, MessageCircle, MoreHorizontal, Share2 } from "lucide-react";
 import { toast } from "sonner";
 import { usePosts } from "../context/PostContext";
-import { Avatar } from "./Avatar";
+import { Avatar } from "./Navbar";
 
 const fallbackImage = "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80";
 
