@@ -1,7 +1,7 @@
 // Dinoc India Edition: the feed keeps social actions immediate, local, and easy to understand.
 
 import { createContext, useContext, useMemo, useState } from "react";
-import { currentUser, posts as seedPosts } from "../data/mockData";
+import { currentUser, posts as seedPosts, stories } from "../data/mockData";
 
 const PostContext = createContext(null);
 
@@ -16,6 +16,7 @@ export function PostProvider({ children }) {
   const [posts, setPosts] = useState(seedPosts);
   const [following, setFollowing] = useState([]);
   const [commentsByPost, setCommentsByPost] = useState(seedComments);
+  const [activeStory, setActiveStory] = useState(null);
 
   const toggleLike = (postId) => setPosts((items) => items.map((post) => post.id === postId ? { ...post, liked: !post.liked, likes: post.likes + (post.liked ? -1 : 1) } : post));
   const toggleSave = (postId) => setPosts((items) => items.map((post) => post.id === postId ? { ...post, saved: !post.saved } : post));
@@ -38,7 +39,7 @@ export function PostProvider({ children }) {
     setPosts((items) => items.map((post) => post.id === postId ? { ...post, comments: post.comments + 1 } : post));
   };
 
-  const value = useMemo(() => ({ posts, following, commentsByPost, toggleLike, toggleSave, sharePost, followUser, publishPost, addComment }), [posts, following, commentsByPost]);
+  const value = useMemo(() => ({ stories, activeStory, setActiveStory, posts, following, commentsByPost, toggleLike, toggleSave, sharePost, followUser, publishPost, addComment }), [activeStory, posts, following, commentsByPost]);
   return <PostContext.Provider value={value}>{children}</PostContext.Provider>;
 }
 

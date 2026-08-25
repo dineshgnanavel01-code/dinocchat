@@ -68,3 +68,11 @@
 - [x] Verify the production build and Home route in the browser.
 - [ ] Save a stable checkpoint and report the corrected version.
 
+
+## Story context repair
+
+- [x] Inspect `StoryBar.jsx`, `StoryViewer.jsx`, and `PostContext.jsx` for mismatched exports and values.
+- [x] Add a consistent stories hook/provider API while retaining existing post actions.
+- [x] Verify story rendering, active-story behavior, the production build, and the regenerated archive.
+- [ ] Save a stable checkpoint and report the corrected version.
+
