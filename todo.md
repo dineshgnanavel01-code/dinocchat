@@ -28,3 +28,7 @@
 - [x] Locate current display name, handles, and avatar image references.
 - [x] Replace the current identity with Dinesh and a male avatar.
 - [x] Rebuild, preview, and package the updated JSX project.
+
+- [ ] Replace the current displayed name with Dinoc while retaining the male avatar.
+- [ ] Rebuild and verify the Dinoc profile and home views.
+- [ ] Regenerate the exact JSX-only ZIP and report safe GitHub output status.
