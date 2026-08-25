@@ -653,3 +653,27 @@ body { background: var(--reference-canvas); color: var(--reference-ink); }
   .reply-area { margin: 10px 10px 12px; }
   .quick-replies { padding-left: 14px; padding-right: 14px; }
 }
+
+/* Mobile Direct layout: keep the app chrome fixed while the conversation content scrolls inside its own viewport. */
+@media (max-width: 720px) {
+  body:has(.messages-page) { overflow: hidden; }
+  body:has(.messages-page) .topbar { position: fixed; inset: 0 0 auto; z-index: 40; }
+  body:has(.messages-page) .app-body { height: 100dvh; min-height: 100dvh; padding-top: 68px; padding-bottom: 66px; overflow: hidden; }
+  body:has(.messages-page) .messages-page { height: calc(100dvh - 134px); min-height: 0; padding: 18px 14px 0; overflow: hidden; }
+  body:has(.messages-page) .messages-panel { height: 100%; min-height: 0; }
+  body:has(.messages-page) .messages-intro { flex: 0 0 auto; margin-bottom: 14px; }
+  body:has(.messages-page) .messages-layout { height: calc(100% - 82px); min-height: 0; display: grid; grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
+  body:has(.messages-page) .chat-list-wrap, body:has(.messages-page) .chat-window-wrap { min-height: 0; overflow: hidden; }
+  body:has(.messages-page) .conversation-list { height: 100%; overflow: auto; }
+  body:has(.messages-page) .thread-panel { height: 100%; display: flex; flex-direction: column; }
+  body:has(.messages-page) .message-thread { flex: 1; min-height: 0; max-height: none; overflow: auto; }
+  body:has(.messages-page) .quick-replies { flex: 0 0 auto; }
+  body:has(.messages-page) .reply-area { flex: 0 0 auto; }
+  body:has(.messages-page) .mobile-nav { position: fixed; inset: auto 0 0; z-index: 50; }
+}
+
+/* Mobile correction: override the desktop two-column grid so inbox and thread occupy full-width stacked panels. */
+@media (max-width: 720px) {
+  body:has(.messages-page) .messages-layout { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
+  body:has(.messages-page) .chat-list-wrap, body:has(.messages-page) .chat-window-wrap { width: 100%; }
+}

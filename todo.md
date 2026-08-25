@@ -159,3 +159,10 @@
 - [ ] Remove development-only files from the deliverable archive without changing the working project.
 - [ ] Build the cleaned package and validate every requested file.
 - [ ] Capture the output page and deliver the ZIP plus preview.
+
+## Fixed mobile chat positioning
+
+- [ ] Inspect the supplied GitHub project URL and current mobile Messages styles.
+- [ ] Fix conversation list, active thread, composer, and bottom navigation positioning to match the reference.
+- [ ] Verify mobile route behavior and synchronize the corrected code to GitHub.
+
