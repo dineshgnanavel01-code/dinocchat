@@ -1,7 +1,8 @@
 // Dinoc India Edition: the feed keeps social actions immediate, local, and easy to understand.
 
 import { createContext, useContext, useMemo, useState } from "react";
-import { currentUser, posts as seedPosts, stories } from "../data/mockData";
+import { posts as seedPosts, stories } from "../data/mockData";
+import { useAuth } from "./AuthContext";
 
 const PostContext = createContext(null);
 
@@ -13,6 +14,7 @@ const seedComments = {
 };
 
 export function PostProvider({ children }) {
+  const { user } = useAuth();
   const [posts, setPosts] = useState(seedPosts);
   const [following, setFollowing] = useState([]);
   const [commentsByPost, setCommentsByPost] = useState(seedComments);
@@ -27,7 +29,8 @@ export function PostProvider({ children }) {
   const followUser = (userId) => setFollowing((items) => items.includes(userId) ? items.filter((id) => id !== userId) : [...items, userId]);
   const publishPost = (text, options = {}) => {
     if (!text.trim()) return null;
-    const post = { id: `p-${Date.now()}`, kind: options.kind || "note", author: { name: currentUser.name, handle: currentUser.handle, avatar: currentUser.avatar, initials: currentUser.initials }, time: "Just now", location: options.location || currentUser.location, text: text.trim(), image: options.image || "", likes: 0, comments: 0, shares: 0, liked: false, saved: false, tags: options.tags || ["dinocnotes"] };
+    const author = user || {};
+    const post = { id: `p-${Date.now()}`, kind: options.kind || "note", author: { name: author.name, handle: author.handle, avatar: author.avatar, initials: author.initials }, time: "Just now", location: options.location || author.location || "Bengaluru, India", text: text.trim(), image: options.image || "", likes: 0, comments: 0, shares: 0, liked: false, saved: false, tags: options.tags || ["dinocnotes"] };
     setPosts((items) => [post, ...items]);
     setCommentsByPost((items) => ({ ...items, [post.id]: [] }));
     return post;
