@@ -1003,3 +1003,44 @@ button:active, .sidebar-nav a:active, .mobile-nav a:active { transform: scale(.9
   .sidebar .side-nav-link:hover svg,
   .sidebar .side-nav-link:focus-visible svg { color: var(--dinoc-peacock-deep) !important; }
 }
+
+/* Final Dinoc full-width polish: the shell owns spacing; content cards stay edge-to-edge and text stays readable. */
+:root { --dinoc-body-size: 15px; --dinoc-line: 1.55; }
+html, body { width: 100%; min-width: 0; }
+body { font-size: var(--dinoc-body-size); line-height: var(--dinoc-line); text-rendering: optimizeLegibility; }
+.app-body { width: 100%; min-height: 100svh; }
+.route-content { width: 100%; min-width: 0; overflow-x: clip; }
+.page-grid { width: 100% !important; max-width: none !important; margin: 0 !important; padding-right: 0 !important; padding-left: 0 !important; }
+.page-grid > section, .page-grid > .narrow-page { min-width: 0; }
+.page-grid h1, .page-grid h2, .page-grid h3 { text-wrap: balance; }
+.page-grid p, .page-grid small, .page-grid span { overflow-wrap: anywhere; }
+.page-intro, .home-hero, .composer-top, .composer-bottom, .explore-results, .thread-header, .settings-head, .profile-head { min-width: 0; }
+.page-intro > *, .home-hero > *, .composer-top > *, .composer-bottom > *, .explore-results > * { min-width: 0; }
+.primary-button, .secondary-button, .share-button, .tool-button, .post-action, .icon-button, .side-nav-link, .mobile-nav a, .conversation-row, .explore-tags button { transition: color .18s ease-out, background-color .18s ease-out, border-color .18s ease-out, transform .18s ease-out, box-shadow .18s ease-out; }
+.primary-button:focus-visible, .secondary-button:focus-visible, .share-button:focus-visible, .tool-button:focus-visible, .post-action:focus-visible, .icon-button:focus-visible, .side-nav-link:focus-visible, .mobile-nav a:focus-visible, .conversation-row:focus-visible, .explore-tags button:focus-visible { outline: 3px solid rgba(242, 184, 75, .72); outline-offset: 2px; }
+@media (min-width: 801px) {
+  .page-grid { min-height: calc(100svh - 76px); padding-top: 30px !important; padding-bottom: 96px !important; }
+  .page-grid > section { width: 100%; }
+  .narrow-page, .single-page-grid > section { max-width: none !important; }
+}
+@media (max-width: 800px) {
+  .route-content { padding-top: 68px; }
+  .page-grid { display: block; min-height: calc(100svh - 68px); padding-top: 24px !important; padding-bottom: 104px !important; }
+  .page-grid > section, .page-grid > .narrow-page { width: 100%; max-width: none !important; }
+  .page-intro, .home-hero { padding-right: 0; padding-left: 0; }
+  .stories-card, .composer-card, .post-card, .right-rail-card, .messages-layout, .settings-card, .profile-card { width: 100%; }
+  .composer-bottom, .explore-results { flex-wrap: wrap; }
+  .composer-tools { min-width: 0; flex-wrap: wrap; }
+}
+@media (max-width: 560px) {
+  .page-grid { padding-top: 18px !important; padding-bottom: 100px !important; }
+  .page-intro h1, .home-hero h1 { font-size: clamp(30px, 10vw, 42px); }
+  .page-subtitle, .auth-copy, .explore-banner p { font-size: 14px; }
+  .composer-bottom { align-items: stretch; }
+  .compose-submit { width: 100%; justify-content: center; }
+  .post-actions { gap: 4px; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .primary-button:hover, .secondary-button:hover, .share-button:hover, .icon-button:hover, .mobile-nav a:hover, .conversation-row:hover, .explore-tags button:hover { transform: translateY(-2px); }
+  .post-action:hover, .tool-button:hover { transform: translateY(-1px); }
+}

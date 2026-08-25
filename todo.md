@@ -302,3 +302,12 @@
 - [x] Force readable dark teal text and icons on light active pills.
 - [x] Build and verify Home and Explore desktop navigation before checkpointing.
 
+
+## Final Dinoc full-width polish
+
+- [ ] Inspect current typography, spacing, overflow, and breakpoint rules.
+- [ ] Improve text hierarchy and align buttons, containers, and page sections.
+- [ ] Remove unnecessary outer padding while preserving safe fixed-navigation offsets.
+- [ ] Keep scrollbars hidden, scrolling smooth, and add restrained transitions.
+- [ ] Verify desktop, tablet, mobile, and below-fold output before checkpointing.
+
