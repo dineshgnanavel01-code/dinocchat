@@ -166,3 +166,11 @@
 - [ ] Fix conversation list, active thread, composer, and bottom navigation positioning to match the reference.
 - [ ] Verify mobile route behavior and synchronize the corrected code to GitHub.
 
+
+## Mobile inbox-to-thread navigation
+
+- [ ] Make a conversation username open the selected full-screen mobile thread.
+- [ ] Keep the mobile top bar and bottom navigation fixed while the thread content scrolls.
+- [ ] Make the thread back arrow return to the inbox list.
+- [ ] Verify the interaction and synchronize the updated GitHub project.
+

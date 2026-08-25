@@ -677,3 +677,17 @@ body { background: var(--reference-canvas); color: var(--reference-ink); }
   body:has(.messages-page) .messages-layout { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 1fr) minmax(0, 1fr); }
   body:has(.messages-page) .chat-list-wrap, body:has(.messages-page) .chat-window-wrap { width: 100%; }
 }
+
+/* Mobile navigation state: show the inbox first, then promote the selected Direct thread to the full panel. */
+@media (max-width: 720px) {
+  body:has(.messages-page) .messages-layout.inbox-only .chat-window-wrap { display: none; }
+  body:has(.messages-page) .messages-layout.show-thread { display: block; }
+  body:has(.messages-page) .messages-layout.show-thread .chat-list-wrap { display: none; }
+  body:has(.messages-page) .messages-layout.show-thread .chat-window-wrap { display: block; height: 100%; }
+  body:has(.messages-page) .messages-layout.show-thread .thread-panel { min-height: 100%; }
+}
+
+@media (max-width: 720px) {
+  body:has(.messages-page) .messages-layout.inbox-only { grid-template-rows: minmax(0, 1fr); }
+  body:has(.messages-page) .messages-layout.inbox-only .chat-list-wrap { height: 100%; }
+}
