@@ -203,3 +203,11 @@
 - [ ] Fix the top navigation and add safe top offsets for page content.
 - [ ] Verify desktop and mobile output and rebuild the Vercel-ready project.
 
+
+## Final full-page image and fixed navbar correction
+
+- [ ] Inspect current override order and rendered spacing.
+- [ ] Ensure post media reaches the full card/page width without image padding.
+- [ ] Ensure fixed navbar offsets remain correct on desktop and mobile.
+- [ ] Build and verify the final output before checkpointing.
+
