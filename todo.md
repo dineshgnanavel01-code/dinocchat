@@ -279,3 +279,12 @@
 - [x] Hide or refine scrollbar chrome, preserve smooth scrolling, and add subtle transitions.
 - [x] Build and verify all representative routes before checkpointing.
 
+
+## dinocchat Indian-inspired responsive redesign
+
+- [ ] Inspect the GitHub source, styles, and route layout.
+- [ ] Apply a distinct Indian-inspired palette, typography, texture, and interaction style.
+- [ ] Correct mobile, tablet, and desktop alignment and spacing.
+- [ ] Hide or refine scrollbar chrome, enable smooth scrolling, and add subtle animations.
+- [ ] Build, verify output, and push the corrected project to GitHub.
+
