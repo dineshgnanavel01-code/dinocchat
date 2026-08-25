@@ -122,3 +122,10 @@
 - [x] Refine the Instagram-like feed shell, stories, actions, and responsive navigation.
 - [x] Verify the build, JSX-only source tree, archive, and GitHub-ready output.
 
+
+## Final Dinoc output verification
+
+- [ ] Confirm the exact requested JSX source tree and React/Tailwind/JavaScript stack.
+- [ ] Verify all routes, contexts, branding, and interactive output page behavior.
+- [ ] Run desktop/mobile build verification and save a final checkpoint.
+
