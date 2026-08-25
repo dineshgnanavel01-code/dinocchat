@@ -211,3 +211,11 @@
 - [ ] Ensure fixed navbar offsets remain correct on desktop and mobile.
 - [ ] Build and verify the final output before checkpointing.
 
+
+## Full-width fixed application shell
+
+- [ ] Inspect outer page padding and shell positioning rules.
+- [ ] Remove unwanted side margins from the application workspace.
+- [ ] Fix the sidebar, top navigation, right rail, and mobile navigation without blocking scrollable content.
+- [ ] Verify output and synchronize the final Vercel-ready code.
+

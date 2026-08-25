@@ -719,3 +719,16 @@ body { background: var(--reference-canvas); color: var(--reference-ink); }
   .post-card > .post-actions { margin-left: 16px; margin-right: 16px; }
   .post-card .post-figure figcaption { padding: 0 16px; }
 }
+
+/* Full-width app shell: navigation chrome is fixed, while route content owns the scrollable surface. */
+@media (min-width: 801px) {
+  .topbar { position: fixed; inset: 0 0 auto; z-index: 60; }
+  .sidebar { position: fixed; inset: 76px auto 0 0; z-index: 45; width: 280px; height: calc(100vh - 76px); min-height: 0; overflow-y: auto; }
+  .route-content { width: calc(100% - 280px); min-width: 0; margin-left: 280px; }
+  .page-grid { width: 100%; max-width: none; margin: 0; padding-right: 0; padding-left: 0; }
+}
+@media (max-width: 800px) {
+  .topbar { position: fixed; inset: 0 0 auto; z-index: 60; }
+  .route-content { width: 100%; min-width: 0; margin: 0; }
+  .page-grid { width: 100%; max-width: none; margin: 0; padding-right: 0; padding-left: 0; }
+}
