@@ -117,8 +117,8 @@
 
 ## Dinoc Instagram-style rename
 
-- [ ] Inspect visible brand references and current exact source structure.
-- [ ] Rename visible product surfaces from Dina Chat to Dinoc while retaining the male Dinoc profile.
-- [ ] Refine the Instagram-like feed shell, stories, actions, and responsive navigation.
-- [ ] Verify the build, JSX-only source tree, archive, and GitHub-ready output.
+- [x] Inspect visible brand references and current exact source structure.
+- [x] Rename visible product surfaces from Dina Chat to Dinoc while retaining the male Dinoc profile.
+- [x] Refine the Instagram-like feed shell, stories, actions, and responsive navigation.
+- [x] Verify the build, JSX-only source tree, archive, and GitHub-ready output.
 
