@@ -114,3 +114,11 @@
 - [x] Preserve Dina Chat branding and all existing local interactions.
 - [x] Verify desktop output and complete a successful production build; mobile rules remain responsive.
 
+
+## Dinoc Instagram-style rename
+
+- [ ] Inspect visible brand references and current exact source structure.
+- [ ] Rename visible product surfaces from Dina Chat to Dinoc while retaining the male Dinoc profile.
+- [ ] Refine the Instagram-like feed shell, stories, actions, and responsive navigation.
+- [ ] Verify the build, JSX-only source tree, archive, and GitHub-ready output.
+

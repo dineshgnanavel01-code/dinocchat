@@ -1,4 +1,4 @@
-# Commonplace Social Media App
+# Dinoc Social Media App
 
 A responsive React and Vite social-media journal built with plain JavaScript and JSX. The interface uses a warm editorial design system: parchment surfaces, ink typography, terracotta actions, and an asymmetric reading-first layout.
 
@@ -74,7 +74,7 @@ The JSX router includes `/login`, `/signup`, `/`, `/explore`, `/messages`, `/not
 
 The feed supports publishing a text note, liking and saving posts, following suggested people, opening stories, adding comments, and showing toast feedback for upcoming features. Messages include selectable conversations and a reply composer. Notifications can be marked as read. Profile and settings screens include responsive navigation and lightweight local UI state.
 
-The data layer is intentionally mock data in `src/data/mockData.js`; no backend or authentication service is connected.
+The data layer is intentionally mock data in `src/data/mockData.js`; no backend or authentication service is connected. The visible product name is Dinoc.
 
 ## Vercel preparation
 
