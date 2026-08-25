@@ -311,3 +311,10 @@
 - [ ] Keep scrollbars hidden, scrolling smooth, and add restrained transitions.
 - [ ] Verify desktop, tablet, mobile, and below-fold output before checkpointing.
 
+
+## Mobile Home alignment correction
+
+- [ ] Inspect mobile Home top spacing, heading width, status row, story row, and bottom-nav clearance.
+- [ ] Apply tighter responsive alignment without changing desktop layout.
+- [ ] Verify mobile Home and Messages output and rebuild before checkpointing.
+

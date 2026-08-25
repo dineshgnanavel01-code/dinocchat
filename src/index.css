@@ -1044,3 +1044,45 @@ body { font-size: var(--dinoc-body-size); line-height: var(--dinoc-line); text-r
   .primary-button:hover, .secondary-button:hover, .share-button:hover, .icon-button:hover, .mobile-nav a:hover, .conversation-row:hover, .explore-tags button:hover { transform: translateY(-2px); }
   .post-action:hover, .tool-button:hover { transform: translateY(-1px); }
 }
+
+/* Mobile Home alignment: keep the city signal, heading, stories, and fixed nav in one clean reading rhythm. */
+@media (max-width: 800px) {
+  .home-grid { padding-top: 10px !important; }
+  .home-grid .feed-column { width: 100%; min-width: 0; }
+  .home-grid .home-kicker { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-height: 28px; margin-bottom: 10px; }
+  .home-grid .home-kicker > span:first-child { white-space: nowrap; }
+  .home-grid .home-kicker .live-pill { flex: 0 0 auto; }
+  .home-grid .page-intro { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 16px; }
+  .home-grid .page-intro > div { min-width: 0; }
+  .home-grid .page-intro h1 { margin: 7px 0 10px; max-width: 12ch; font-size: clamp(32px, 9.5vw, 42px); line-height: .98; letter-spacing: -.06em; }
+  .home-grid .page-intro .page-subtitle { max-width: 34ch; margin: 0; }
+  .home-grid .filter-button { flex: 0 0 38px; margin-top: 4px; }
+  .home-grid .city-strip { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px 12px; margin-bottom: 18px; }
+  .home-grid .city-strip > span { min-width: 0; white-space: nowrap; }
+  .home-grid .city-strip > span:nth-child(2) { justify-self: end; }
+  .home-grid .city-strip > button { grid-column: 1 / -1; justify-self: end; }
+  .home-grid .stories-card { margin-bottom: 18px; }
+  .home-grid .stories-card .stories-header { align-items: center; }
+  .home-grid .create-post-card { margin-bottom: 18px; }
+  .home-grid .feed-toolbar { align-items: center; gap: 8px; overflow-x: auto; }
+  .home-grid .feed-tabs { flex: 0 0 auto; }
+}
+@media (max-width: 480px) {
+  .home-grid { padding-top: 6px !important; }
+  .home-grid .home-kicker { font-size: 10px; }
+  .home-grid .home-kicker .live-pill { font-size: 9px; padding: 7px 9px; }
+  .home-grid .page-intro h1 { max-width: 11ch; font-size: clamp(30px, 9.8vw, 39px); }
+  .home-grid .page-intro .page-subtitle { font-size: 13px; line-height: 1.45; }
+  .home-grid .city-strip { font-size: 10px; }
+}
+
+/* Mobile gap fix: app-body already reserves the fixed navbar height, so route-content must not add a second offset. */
+@media (max-width: 800px) {
+  .app-body { padding-top: 68px !important; }
+  .route-content { padding-top: 0 !important; }
+  .home-grid { padding-top: 8px !important; }
+  .home-grid .home-kicker { margin-top: 0; }
+}
+@media (max-width: 480px) {
+  .home-grid { padding-top: 5px !important; }
+}
