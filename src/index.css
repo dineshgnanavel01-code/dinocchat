@@ -977,3 +977,29 @@ button:active, .sidebar-nav a:active, .mobile-nav a:active { transform: scale(.9
   .sidebar .primary-button { background: linear-gradient(100deg, #f07c51, #ec3d93); color: #fff; }
 }
 .mobile-drawer { background: var(--dinoc-peacock); }
+
+/* Correct selector contract: Sidebar uses .side-nav-link, not .sidebar-nav. */
+@media (min-width: 801px) {
+  .sidebar .side-nav-link.is-active,
+  .sidebar .side-nav-link.is-active span,
+  .sidebar .side-nav-link.is-active svg,
+  .sidebar .side-nav-link.is-active strong,
+  .sidebar .side-nav-link.is-active small {
+    color: var(--dinoc-peacock-deep) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+  .sidebar .side-nav-link.is-active {
+    background: #fff4ed !important;
+    border: 1px solid rgba(239, 101, 77, .18);
+  }
+  .sidebar .side-nav-link:hover,
+  .sidebar .side-nav-link:focus-visible {
+    color: var(--dinoc-peacock-deep) !important;
+    background: var(--dinoc-saffron) !important;
+  }
+  .sidebar .side-nav-link:hover span,
+  .sidebar .side-nav-link:focus-visible span,
+  .sidebar .side-nav-link:hover svg,
+  .sidebar .side-nav-link:focus-visible svg { color: var(--dinoc-peacock-deep) !important; }
+}

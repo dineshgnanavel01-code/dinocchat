@@ -295,3 +295,10 @@
 - [x] Apply a distinct sidebar background color with readable navigation states.
 - [x] Verify the desktop/mobile sidebar and rebuild before checkpointing.
 
+
+## Desktop active navigation contrast
+
+- [x] Inspect inherited active text and icon colors.
+- [x] Force readable dark teal text and icons on light active pills.
+- [x] Build and verify Home and Explore desktop navigation before checkpointing.
+
