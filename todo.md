@@ -226,3 +226,11 @@
 - [ ] Expand Explore content across the available fixed-shell workspace.
 - [ ] Verify desktop/mobile Explore output and rebuild before checkpointing.
 
+
+## Smooth scrolling and zero padding
+
+- [x] Inspect current overflow and spacing rules.
+- [x] Hide visible scrollbars while keeping scrollable areas usable.
+- [x] Enable smooth scrolling and remove unnecessary top, bottom, left, and right padding.
+- [x] Verify desktop/mobile output and rebuild before checkpointing.
+

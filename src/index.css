@@ -743,3 +743,22 @@ body { background: var(--reference-canvas); color: var(--reference-ink); }
   .page-grid.single-page-grid:has(.explore-page), .explore-page { width: 100%; max-width: none; }
   .explore-page .post-list { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Final shell cleanup: no visible scrollbar chrome, smooth movement, and zero visible page padding. */
+html { scroll-behavior: smooth; }
+html, body { scrollbar-width: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar, *::-webkit-scrollbar { width: 0; height: 0; display: none; }
+* { scrollbar-width: none; }
+body { overflow-x: hidden; }
+.app-body, .route-content, .page-grid { padding-left: 0 !important; padding-right: 0 !important; }
+.page-grid { width: 100% !important; max-width: none !important; margin: 0 !important; padding-bottom: 0 !important; }
+.messages-page { padding: 0 !important; }
+.conversation-list, .message-thread, .stories-scroll, .quick-replies { scroll-behavior: smooth; }
+@media (min-width: 801px) {
+  .app-body { padding-top: 76px; }
+  .route-content { padding-bottom: 0; }
+}
+@media (max-width: 800px) {
+  .app-body { padding-top: 68px; padding-bottom: 68px; }
+  .mobile-nav { position: fixed; right: 0; bottom: 0; left: 0; z-index: 70; }
+}
