@@ -264,3 +264,18 @@
 - [x] Add clear accessible hover color changes for all navigation items.
 - [x] Verify hover behavior and rebuild the Vercel-ready project.
 
+
+## Active Home label contrast fix
+
+- [ ] Inspect inherited active-label colors.
+- [ ] Ensure the Home label and icon use dark cobalt text on the active white pill.
+- [ ] Build and verify the active Home output before checkpointing.
+
+
+## Responsive polish pass
+- [x] Inspect current breakpoints, alignment, overflow, and animation selectors.
+- [x] Improve mobile, tablet, and desktop layout sizing and spacing.
+- [x] Keep below-fold text readable and content aligned in screenshots.
+- [x] Hide or refine scrollbar chrome, preserve smooth scrolling, and add subtle transitions.
+- [x] Build and verify all representative routes before checkpointing.
+
