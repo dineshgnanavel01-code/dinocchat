@@ -174,3 +174,32 @@
 - [ ] Make the thread back arrow return to the inbox list.
 - [ ] Verify the interaction and synchronize the updated GitHub project.
 
+
+## Complete Dinoc social app delivery
+
+- [x] Compare uploaded Vite starter configuration with the existing Dinoc source.
+- [x] Verify authentication, posting, feed, stories, reactions, comments, messages, notifications, profile, and settings flows.
+- [x] Match the supplied responsive dashboard reference without adding unnecessary source files.
+- [x] Build, package, verify output, and synchronize the final GitHub-ready project.
+
+
+## GitHub and Vercel output verification
+
+- [ ] Check the latest GitHub commit and repository visibility.
+- [ ] Check the Vercel project deployment and live output routes.
+- [ ] Resolve any mismatch and verify the final deployed Home and Messages pages.
+
+
+## Full-bleed visual output
+
+- [ ] Inspect current page, feed-card, and image spacing rules.
+- [ ] Remove unwanted outer padding while preserving readable content spacing.
+- [ ] Verify the output image fills the page on desktop and mobile.
+
+
+## Full-bleed posts and fixed navigation
+
+- [ ] Remove inner post-image padding while preserving post header and action spacing.
+- [ ] Fix the top navigation and add safe top offsets for page content.
+- [ ] Verify desktop and mobile output and rebuild the Vercel-ready project.
+

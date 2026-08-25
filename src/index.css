@@ -691,3 +691,31 @@ body { background: var(--reference-canvas); color: var(--reference-ink); }
   body:has(.messages-page) .messages-layout.inbox-only { grid-template-rows: minmax(0, 1fr); }
   body:has(.messages-page) .messages-layout.inbox-only .chat-list-wrap { height: 100%; }
 }
+
+/* Dinoc layout finish: fixed navigation with edge-to-edge post media and padded editorial controls. */
+.topbar { position: fixed; inset: 0 0 auto; z-index: 60; width: 100%; }
+.app-body { min-height: 100vh; padding-top: 76px; }
+.post-card { padding: 0; overflow: hidden; }
+.post-card > .post-header,
+.post-card > .post-copy,
+.post-card > .quote-mark,
+.post-card > .note-caption,
+.post-card > .post-location,
+.post-card > .post-actions { margin-left: 20px; margin-right: 20px; }
+.post-card > .post-header { padding-top: 22px; }
+.post-card > .post-actions { padding-bottom: 18px; }
+.post-card .post-figure { width: 100%; }
+.post-card .post-figure .post-image { display: block; width: 100%; border-radius: 0; }
+.post-card .post-figure figcaption { padding: 0 20px; }
+@media (max-width: 720px) {
+  .topbar { height: 68px; }
+  .app-body { padding-top: 68px; }
+  .post-card > .post-header { padding-top: 18px; }
+  .post-card > .post-header,
+  .post-card > .post-copy,
+  .post-card > .quote-mark,
+  .post-card > .note-caption,
+  .post-card > .post-location,
+  .post-card > .post-actions { margin-left: 16px; margin-right: 16px; }
+  .post-card .post-figure figcaption { padding: 0 16px; }
+}
