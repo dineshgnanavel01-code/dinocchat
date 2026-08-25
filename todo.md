@@ -32,3 +32,7 @@
 - [ ] Replace the current displayed name with Dinoc while retaining the male avatar.
 - [ ] Rebuild and verify the Dinoc profile and home views.
 - [ ] Regenerate the exact JSX-only ZIP and report safe GitHub output status.
+
+- [ ] Define a distinct visual direction for the Dinoc edition.
+- [ ] Refresh the output page and apply the alternate style across the JSX app.
+- [ ] Verify the alternate-style build and package a new ZIP.

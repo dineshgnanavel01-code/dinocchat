@@ -66,3 +66,7 @@ The mark is a simple four-ray terracotta sun with one offset ray, suggesting a p
 ## Style Decisions
 
 The trusted visual review is accepted as an execution contract. Terracotta `#C65D43` now owns primary actions and social confirmations; ink-black remains structural and typographic. Utility screens use analog stationery cues such as paper layering, annotation labels, dotted rules, and calm hierarchy. Feed posts alternate between pull-quote, photo-caption, and note-like rhythms rather than repeating one generic card treatment. Imagery favors intimate everyday details, walks, desks, light, paper, neighborhood moments, and imperfect human scenes.
+
+## Civic Signal Edition
+
+This Dinoc edition intentionally overrides the earlier Warm Editorial Community palette with a cooler Civic Signal system: blue-gray studio surfaces, cobalt actions, lime highlights, crisp rounded controls, and heavier Manrope display titles. The purpose is to make the output page feel more energetic, modern, and bulletin-like while preserving the three-zone shell, accessible interactions, Dinoc identity, and exact JSX-only file structure. Blue is intentional in this alternate edition; it is not a regression to be reverted to terracotta.
