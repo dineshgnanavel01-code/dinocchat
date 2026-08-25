@@ -70,3 +70,17 @@ The trusted visual review is accepted as an execution contract. Terracotta `#C65
 ## Civic Signal Edition
 
 This Dinoc edition intentionally overrides the earlier Warm Editorial Community palette with a cooler Civic Signal system: blue-gray studio surfaces, cobalt actions, lime highlights, crisp rounded controls, and heavier Manrope display titles. The purpose is to make the output page feel more energetic, modern, and bulletin-like while preserving the three-zone shell, accessible interactions, Dinoc identity, and exact JSX-only file structure. Blue is intentional in this alternate edition; it is not a regression to be reverted to terracotta.
+
+## Dinoc India Edition
+
+### Design Direction
+A contemporary India-inspired social network with the energy of a neighborhood adda, the visual warmth of hand-painted signboards, and the clarity of a modern mobile-first product. It should feel local without becoming ornamental or stereotyped: human portraits, city moments, chai-break conversations, and familiar social rituals set the tone.
+
+### Visual System
+Use deep indigo, marigold, vermilion, mint, and warm cream with high-contrast text. Pair a confident grotesk display face with Manrope utility text. Use rounded cards, bold section labels, subtle grain, and small rangoli-like geometry only as restrained accents. The layout should feel more dynamic and social than the earlier editorial journal: denser feed scanning, prominent stories, quick actions, and chat-first pathways.
+
+### Interaction Model
+All frontend interactions should work with local React state: likes, saves, follows, comments, new posts, story viewing, notifications read state, theme switching, sign-in/sign-up, conversation selection, message sending, unread counts, and responsive mobile navigation. Since this remains a static JSX project, persistence is intentionally session-local and not a real backend.
+
+### Brand Voice
+Use friendly, direct microcopy with occasional Indian conversational cues, such as “What’s happening in your corner?” and “Share a little moment.” Avoid caricature, excessive slang, and decorative cultural references that do not improve usability.

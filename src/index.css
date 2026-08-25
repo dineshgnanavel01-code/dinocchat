@@ -1,28 +1,30 @@
-/* Civic Signal: cool studio surfaces, cobalt navigation, lime highlights, high-contrast typography, and a more energetic community bulletin rhythm. */
+/* Dinoc India Edition: warm cream surfaces, indigo structure, vermilion actions, marigold highlights, teal community states, and a lively social-app rhythm. */
 
 @import "tailwindcss";
 
 :root {
-  --paper: #edf2f4;
-  --paper-bright: #ffffff;
-  --paper-deep: #dbe5ea;
-  --ink: #10232f;
-  --muted: #64727d;
-  --faded: #91a0a9;
-  --line: #c8d5dc;
-  --terracotta: #2457d6;
-  --terracotta-dark: #153ca4;
-  --blush: #d9ff5f;
-  --moss: #227b68;
-  --butter: #f1f7c9;
+  --paper: #fff7e8;
+  --paper-bright: #fffdf8;
+  --paper-deep: #f2dfc2;
+  --ink: #2d1b14;
+  --muted: #7d6b63;
+  --faded: #aa978d;
+  --line: #e7d5c1;
+  --terracotta: #e85b35;
+  --terracotta-dark: #b94528;
+  --blush: #f6b24b;
+  --moss: #1e8279;
+  --butter: #fff0bd;
+  --indigo: #302b7a;
+  --mint: #d8f1e3;
   --white: #ffffff;
-  --shadow: 0 18px 44px rgba(21, 60, 92, 0.10), 0 3px 10px rgba(21, 60, 92, 0.06);
+  --shadow: 0 18px 44px rgba(95, 48, 28, 0.11), 0 3px 10px rgba(95, 48, 28, 0.06);
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; background: var(--paper); color: var(--ink); font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; background-image: radial-gradient(circle at 18% 12%, rgba(36, 87, 214, .08) 0 1px, transparent 1px); background-size: 18px 18px; }
+body { margin: 0; min-width: 320px; background: var(--paper); color: var(--ink); font-family: "Manrope", ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; background-image: radial-gradient(circle at 18% 12%, rgba(232, 91, 53, .07) 0 1px, transparent 1px); background-size: 18px 18px; }
 button, input, textarea { font: inherit; }
 button { color: inherit; }
 button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--terracotta); outline-offset: 3px; }
@@ -30,7 +32,7 @@ a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 
 .brand-link, .auth-wordmark { display: inline-flex; align-items: center; gap: 10px; }
-.brand-symbol { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 9px; color: var(--paper-bright); background: var(--terracotta); box-shadow: 0 3px 8px rgba(36, 87, 214, .22); }
+.brand-symbol { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 9px; color: var(--paper-bright); background: var(--indigo); box-shadow: 0 3px 8px rgba(48, 43, 122, .24); }
 .large-symbol { width: 54px; height: 54px; margin-bottom: 24px; }
 .brand-wordmark { font-family: "DM Serif Display", Georgia, serif; font-size: 24px; letter-spacing: -.035em; line-height: 1; }
 .eyebrow { display: inline-block; color: var(--muted); font-size: 10px; font-weight: 800; letter-spacing: .15em; line-height: 1.2; text-transform: uppercase; }
@@ -39,9 +41,9 @@ img { display: block; max-width: 100%; }
 .icon-button:active, .primary-button:active, .secondary-button:active, .share-button:active, .send-button:active { transform: scale(.97); }
 .primary-button, .secondary-button, .share-button, .quiet-action, .quiet-link, .sort-button, .tool-button, .follow-button, .save-button, .post-action, .send-button, .profile-tab, .feed-tab, .nav-icon-link, .side-nav-link, .mobile-nav-link, .settings-row, .conversation-row, .trend-row, .story-item, .text-button { border: 0; cursor: pointer; background: transparent; }
 .primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 43px; padding: 0 20px; border-radius: 999px; color: var(--paper-bright); background: var(--terracotta); font-size: 12px; font-weight: 800; transition: background-color 180ms var(--ease-out), box-shadow 180ms var(--ease-out), transform 160ms var(--ease-out); }
-.primary-button:hover { background: var(--terracotta-dark); box-shadow: 0 7px 16px rgba(36, 87, 214, .22); }
+.primary-button:hover { background: var(--terracotta-dark); box-shadow: 0 7px 16px rgba(232, 91, 53, .24); }
 .secondary-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 41px; padding: 0 17px; border: 1px solid var(--line); border-radius: 999px; background: var(--paper-bright); font-size: 12px; font-weight: 800; transition: border-color 180ms var(--ease-out), background-color 180ms var(--ease-out), transform 160ms var(--ease-out); }
-.secondary-button:hover { border-color: var(--terracotta); background: #f7fbff; }
+.secondary-button:hover { border-color: var(--terracotta); background: #fffaf1; }
 .quiet-link, .quiet-action { display: inline-flex; align-items: center; gap: 6px; color: var(--terracotta-dark); font-size: 11px; font-weight: 800; }
 .quiet-link:hover, .quiet-action:hover { text-decoration: underline; text-underline-offset: 4px; }
 .small-button { min-height: 36px; font-size: 11px; }
@@ -77,8 +79,8 @@ img { display: block; max-width: 100%; }
 .side-nav { display: flex; flex-direction: column; gap: 3px; padding: 29px 0 24px; }
 .nav-label { margin: 0 10px 12px; }
 .side-nav-link { display: flex; align-items: center; gap: 13px; width: 100%; padding: 11px 10px; border-radius: 5px; color: var(--muted); text-align: left; font-size: 12px; font-weight: 700; transition: background-color 180ms var(--ease-out), color 180ms var(--ease-out), transform 160ms var(--ease-out); }
-.side-nav-link:hover { color: var(--ink); background: rgba(200, 213, 220, .65); }
-.side-nav-link.is-active { color: var(--terracotta-dark); background: rgba(217, 255, 95, .48); }
+.side-nav-link:hover { color: var(--ink); background: rgba(242, 223, 194, .75); }
+.side-nav-link.is-active { color: var(--terracotta-dark); background: rgba(246, 178, 75, .42); }
 .side-nav-link:active { transform: translateX(1px); }
 .nav-count { display: grid; place-items: center; width: 18px; height: 18px; margin-left: auto; border-radius: 50%; color: var(--paper-bright); background: var(--terracotta); font-size: 9px; }
 .share-button { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 42px; margin: 0 8px; border-radius: 6px; color: var(--paper-bright); background: var(--terracotta); font-size: 11px; font-weight: 800; transition: background-color 180ms var(--ease-out), transform 160ms var(--ease-out); }
@@ -211,7 +213,7 @@ img { display: block; max-width: 100%; }
 .messages-intro { margin-bottom: 32px; }
 .messages-layout { position: relative; display: grid; grid-template-columns: 300px minmax(0, 1fr); min-height: 590px; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; background: var(--paper-bright); box-shadow: 0 12px 34px rgba(21, 60, 92, .10), 0 2px 7px rgba(21, 60, 92, .05); }
 .messages-layout::after { position: absolute; right: 17px; bottom: 9px; color: var(--faded); content: "QUIET CORRESPONDENCE"; font-size: 7px; font-weight: 800; letter-spacing: .14em; pointer-events: none; }
-.conversation-list { border-right: 1px solid var(--line); background: rgba(219, 229, 234, .55); }
+.conversation-list { border-right: 1px solid var(--line); background: rgba(242, 223, 194, .55); }
 .inbox-search { display: flex; align-items: center; gap: 9px; height: 57px; padding: 0 17px; border-bottom: 1px solid var(--line); color: var(--muted); }
 .inbox-search input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--ink); font-size: 11px; }
 .conversation-row { display: flex; align-items: center; gap: 11px; width: 100%; padding: 15px 14px; border-bottom: 1px dotted rgba(221, 216, 206, .95); text-align: left; transition: background-color 180ms var(--ease-out); }
@@ -249,7 +251,7 @@ img { display: block; max-width: 100%; }
 
 .notification-list { border-top: 1px solid var(--line); }
 .notification-row { position: relative; display: flex; align-items: center; gap: 14px; padding: 18px 5px; border-bottom: 1px dotted var(--line); }
-.notification-row.is-unread { background: rgba(217, 255, 95, .18); }
+.notification-row.is-unread { background: rgba(246, 178, 75, .16); }
 .notification-copy { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 6px; }
 .notification-copy p { margin: 0; font-size: 12px; line-height: 1.5; }
 .notification-copy p strong { font-weight: 800; }
@@ -265,9 +267,9 @@ img { display: block; max-width: 100%; }
 .profile-page { max-width: 760px; }
 .profile-cover { position: relative; height: 180px; overflow: hidden; border-radius: 8px 8px 0 0; background: var(--moss); }
 .profile-cover::before { position: absolute; inset: 0; background: linear-gradient(113deg, rgba(255,255,255,.12), transparent 45%, rgba(16,35,47,.18)); content: ""; }
-.cover-shape { position: absolute; border: 1px solid rgba(217,255,95,.35); border-radius: 50%; }
+.cover-shape { position: absolute; border: 1px solid rgba(246,178,75,.35); border-radius: 50%; }
 .cover-shape-one { top: -105px; right: 8%; width: 360px; height: 360px; }
-.cover-shape-two { bottom: -190px; left: -40px; width: 390px; height: 390px; border-color: rgba(217,255,95,.32); }
+.cover-shape-two { bottom: -190px; left: -40px; width: 390px; height: 390px; border-color: rgba(246,178,75,.32); }
 .cover-menu { position: absolute; top: 14px; right: 15px; color: var(--paper-bright); }
 .cover-menu:hover { color: var(--ink); background: rgba(255,255,255,.72); }
 .profile-heading { display: flex; align-items: flex-end; justify-content: space-between; margin: -48px 24px 0; }
@@ -313,7 +315,7 @@ img { display: block; max-width: 100%; }
 .auth-art { position: relative; display: flex; align-items: flex-end; min-height: 100vh; padding: 10vw 9vw 9vw; overflow: hidden; color: var(--paper-bright); background: var(--moss); }
 .auth-art::before, .auth-art::after { position: absolute; border: 1px solid rgba(239,230,201,.27); border-radius: 50%; content: ""; }
 .auth-art::before { top: -16vw; right: -5vw; width: 43vw; height: 43vw; }
-.auth-art::after { bottom: -22vw; left: -10vw; width: 42vw; height: 42vw; border-color: rgba(217,255,95,.35); }
+.auth-art::after { bottom: -22vw; left: -10vw; width: 42vw; height: 42vw; border-color: rgba(246,178,75,.35); }
 .auth-art-copy { position: relative; z-index: 1; max-width: 500px; }
 .auth-art-copy .eyebrow { color: rgba(255,255,255,.7); }
 .auth-art-copy h1 { margin: 19px 0 17px; font-family: "DM Serif Display", Georgia, serif; font-size: clamp(48px, 6.8vw, 90px); font-weight: 400; letter-spacing: -.06em; line-height: .86; }
@@ -463,3 +465,77 @@ img { display: block; max-width: 100%; }
   .auth-form { margin: 42px 0 45px; }
   .auth-form h2 { font-size: 33px; }
 }
+
+/* Dinoc India Edition: chat utilities use indigo framing, vermilion sends, mint empty states, and compact adda-style controls. */
+.inbox-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 18px 17px 14px; border-bottom: 1px solid var(--line); background: var(--paper-bright); }
+.inbox-heading h2 { display: flex; align-items: center; gap: 7px; margin: 6px 0 0; color: var(--indigo); font-family: "DM Serif Display", Georgia, serif; font-size: 19px; font-weight: 400; }
+.conversation-items { min-height: 0; }
+.empty-chat, .empty-thread { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 34px 22px; color: var(--muted); text-align: center; }
+.empty-chat strong, .empty-thread strong { color: var(--ink); font-size: 12px; }
+.empty-chat span, .empty-thread span { max-width: 220px; font-size: 10px; line-height: 1.5; }
+.empty-thread { min-height: 280px; justify-content: center; color: var(--moss); }
+.empty-thread strong { font-family: "DM Serif Display", Georgia, serif; font-size: 22px; font-weight: 400; }
+.typing-note { display: flex; align-items: center; gap: 4px; margin: 4px 0 0 4px; color: var(--muted); font-size: 9px; }
+.typing-note span { width: 4px; height: 4px; border-radius: 50%; background: var(--terracotta); animation: blink-dot 900ms ease-in-out infinite; }
+.typing-note span:nth-child(2) { animation-delay: 120ms; }
+.typing-note span:nth-child(3) { animation-delay: 240ms; }
+.quick-replies { display: flex; gap: 7px; padding: 11px 18px 10px; border-top: 1px dotted var(--line); overflow-x: auto; scrollbar-width: none; }
+.quick-replies::-webkit-scrollbar { display: none; }
+.quick-replies button { flex: 0 0 auto; padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--indigo); background: var(--mint); font-size: 9px; font-weight: 800; cursor: pointer; transition: transform 160ms var(--ease-out), background-color 180ms var(--ease-out); }
+.quick-replies button:hover { background: var(--butter); transform: translateY(-1px); }
+@keyframes blink-dot { 0%, 100% { opacity: .35; transform: translateY(0); } 50% { opacity: 1; transform: translateY(-2px); } }
+
+/* Dinoc India Edition: social surfaces use small border-radius variation instead of a uniform card grid. */
+.post-card:nth-child(odd) { border-radius: 18px 8px 18px 8px; }
+.post-card:nth-child(even) { border-radius: 8px 18px 8px 18px; }
+.post-card.post-quote { border-top: 4px solid var(--blush); }
+.post-card.post-note { background: linear-gradient(135deg, var(--paper-bright), var(--mint)); }
+.post-card.post-photo .post-image { border-radius: 14px; }
+.prompt-note { background: var(--butter); border: 1px solid rgba(246, 178, 75, .35); }
+.profile-cover, .auth-art { background: linear-gradient(135deg, var(--indigo), var(--moss)); }
+
+/* Dinoc India Edition: home-page cues make the feed feel local, current, and social-first. */
+.home-kicker { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 17px; color: var(--indigo); font-size: 10px; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.home-kicker > span:first-child { display: inline-flex; align-items: center; gap: 6px; }
+.live-pill { display: inline-flex; align-items: center; gap: 6px; padding: 6px 9px; border-radius: 999px; color: var(--moss); background: var(--mint); font-size: 8px; letter-spacing: .04em; }
+.live-pill i { width: 6px; height: 6px; border-radius: 50%; background: var(--terracotta); box-shadow: 0 0 0 3px rgba(232,91,53,.12); }
+.page-subtitle { max-width: 490px; margin: 13px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.city-strip { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin: -9px 0 28px; padding: 11px 13px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); background: rgba(255,253,248,.72); font-size: 9px; }
+.city-strip span, .city-strip button { display: inline-flex; align-items: center; gap: 6px; }
+.city-strip span:first-child { color: var(--terracotta-dark); font-weight: 800; }
+.city-strip button { margin-left: auto; border: 0; color: var(--indigo); background: transparent; font-size: 9px; font-weight: 850; cursor: pointer; }
+.feed-context { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 13px 0 -8px; color: var(--muted); font-size: 9px; }
+.feed-context strong { color: var(--indigo); font-size: 10px; }
+
+/* Dinoc India Edition: notification controls stay tactile, readable, and clearly actionable. */
+.notification-summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 5px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: 10px; }
+.notification-summary > span { display: inline-flex; align-items: center; gap: 6px; }
+.notification-row { width: 100%; border-right: 0; border-left: 0; text-align: left; cursor: pointer; }
+.notification-row:hover { background: var(--mint); }
+.notification-row.is-unread:hover { background: var(--butter); }
+
+/* Dinoc India Edition: Explore uses a practical discovery rhythm with a bright search field and city-topic chips. */
+.explore-search { display: flex; align-items: center; gap: 10px; margin: -8px 0 20px; padding: 0 14px; height: 46px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); background: var(--paper-bright); box-shadow: var(--shadow); }
+.explore-search input { min-width: 0; flex: 1; border: 0; outline: 0; color: var(--ink); background: transparent; font-size: 12px; }
+.explore-search input::placeholder { color: var(--faded); }
+.explore-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 19px 0; }
+.explore-tags button { padding: 8px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--indigo); background: var(--paper-bright); font-size: 10px; font-weight: 800; cursor: pointer; }
+.explore-tags button:hover, .explore-tags button.is-active { border-color: var(--terracotta); color: var(--paper-bright); background: var(--terracotta); }
+.explore-results { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 22px 0 -7px; color: var(--muted); font-size: 10px; }
+.explore-results span { display: inline-flex; align-items: center; gap: 6px; }
+.explore-results button { border: 0; color: var(--indigo); background: transparent; font-size: 10px; font-weight: 800; cursor: pointer; }
+
+/* Dinoc India Edition: night mode keeps indigo and marigold legible while reducing glare for evening scrolling. */
+.theme-night { --paper: #171529; --paper-bright: #24213b; --paper-deep: #322d4d; --ink: #fff7e8; --muted: #beb4c9; --faded: #817b9a; --line: rgba(255,247,232,.16); --terracotta: #ff7650; --terracotta-dark: #ff9b79; --butter: #4b405b; --mint: #233d3a; --indigo: #dcd6ff; --white: #ffffff; }
+.theme-night body, .theme-night .topbar, .theme-night .sidebar, .theme-night .mobile-nav { background-color: var(--paper); color: var(--ink); }
+.theme-night .topbar { background: rgba(23,21,41,.92); border-bottom-color: var(--line); }
+.theme-night .sidebar { background: rgba(50,45,77,.48); }
+.theme-night .post-card, .theme-night .composer-card, .theme-night .settings-card, .theme-night .messages-layout, .theme-night .secondary-button, .theme-night .thread-header { background: var(--paper-bright); }
+.theme-night .search-field, .theme-night .explore-search { background: rgba(36,33,59,.8); }
+.theme-night .post-note, .theme-night .post-quote { background: #2a2743; }
+.theme-night .conversation-list { background: rgba(50,45,77,.55); }
+
+/* Dinoc India Edition: the composer shows place and length context without adding friction to posting. */
+.composer-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: -4px 0 10px; color: var(--faded); font-size: 9px; }
+.composer-meta button { display: inline-flex; align-items: center; gap: 5px; border: 0; color: var(--moss); background: transparent; font-size: 9px; font-weight: 800; cursor: pointer; }
+.tool-button.is-active { color: var(--terracotta-dark); background: var(--butter); }

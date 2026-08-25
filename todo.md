@@ -36,3 +36,13 @@
 - [ ] Define a distinct visual direction for the Dinoc edition.
 - [ ] Refresh the output page and apply the alternate style across the JSX app.
 - [ ] Verify the alternate-style build and package a new ZIP.
+
+- [ ] Define the India-inspired visual language and client-side interaction model.
+- [ ] Expand feed, stories, profile, explore, and navigation interactions.
+- [ ] Make chat, notifications, comments, auth, and settings interactive.
+- [ ] Verify responsive routes, build output, and JSX-only packaging.
+
+- [ ] Implement the India-inspired feed and refreshed output page.
+- [ ] Complete interactive chat, stories, comments, notifications, auth, and settings.
+- [ ] Verify the exact JSX-only tree, responsive routes, and production build.
+- [ ] Package the ZIP and prepare safe GitHub-ready output.
