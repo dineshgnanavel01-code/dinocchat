@@ -242,3 +242,10 @@
 - [ ] Build a clean ZIP and capture the output page.
 - [ ] Deliver the archive and output preview.
 
+
+## Fresh attractive Dinoc redesign
+
+- [ ] Commit to a distinct attractive visual system for Dinoc without changing the requested React/JSX structure.
+- [ ] Preserve and verify authentication, posting, feed, stories, likes, comments, messaging, notifications, profile, settings, validation, and responsive interactions.
+- [ ] Build a fresh ZIP and capture the final output page.
+

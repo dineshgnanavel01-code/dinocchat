@@ -92,3 +92,13 @@ The attached reference image overrides earlier visual directions for this redesi
 ### Style Decisions
 
 Use white cards on a #f7f7f8 workspace with a #e8edf7 outer canvas, coral-to-pink action accents, charcoal text, and cool gray utility text. The left rail remains persistent on desktop and collapses to mobile navigation. Story rings use a warm coral/magenta accent. Feed cards should feel photographic and social, with compact metadata and familiar reaction controls. Avoid purple gradients, heavy ornament, or oversized editorial headings in this reference-matched pass.
+
+
+## Fresh attractive Dinoc direction: Luminous Terrace
+
+This new pass is intentionally different from the earlier reference-only treatment. Dinoc uses a bright ivory workspace, cobalt navigation spine, marigold discovery cards, coral social actions, soft paper-like depth, and compact editorial labels. The structure stays asymmetric and social-first: fixed navigation, wide feed, stories, contextual right rail, and direct chat pathways. Interaction feedback uses quick lift, pressed scale, and color changes under 220ms; typography pairs a serif display voice with a clean sans-serif interface voice. This is the chosen direction for the fresh attractive version.
+
+
+## Style Decisions
+
+The final visual pass accepts the review amendments: cobalt now owns the persistent navigation and identity spine on desktop and mobile; marigold owns discovery and prompt surfaces; coral owns social actions and confirmations. Utility pages share the same asymmetric shell grammar as Home. Decorative gradients are secondary, while restrained geometry, ivory paper depth, compact labels, and contemporary Indian everyday imagery carry the product character.

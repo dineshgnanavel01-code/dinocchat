@@ -762,3 +762,91 @@ body { overflow-x: hidden; }
   .app-body { padding-top: 68px; padding-bottom: 68px; }
   .mobile-nav { position: fixed; right: 0; bottom: 0; left: 0; z-index: 70; }
 }
+
+/* Luminous Terrace refresh: bright ivory surfaces, cobalt navigation, marigold discovery, and coral social actions. */
+:root {
+  --terrace-ivory: #fffaf0;
+  --terrace-cloud: #f1f5fb;
+  --terrace-cobalt: #3159d8;
+  --terrace-cobalt-deep: #173681;
+  --terrace-marigold: #f4c84b;
+  --terrace-coral: #ef654d;
+  --terrace-ink: #16213d;
+  --terrace-muted: #73809b;
+  --terrace-line: #e4e9f2;
+}
+html { background: var(--terrace-cloud); }
+body { background: linear-gradient(135deg, #f7faff 0%, var(--terrace-cloud) 54%, #fff8ec 100%); color: var(--terrace-ink); }
+.topbar { background: rgba(255, 253, 247, .9); border-bottom: 1px solid var(--terrace-line); box-shadow: 0 8px 24px rgba(49, 89, 216, .08); }
+.brand-symbol { background: var(--terrace-cobalt); box-shadow: 0 8px 18px rgba(49, 89, 216, .24); }
+.brand-wordmark { color: var(--terrace-cobalt-deep); letter-spacing: -.04em; }
+.search-field { border-color: var(--terrace-line); background: #f7f9fd; }
+.search-field:focus-within { border-color: var(--terrace-cobalt); box-shadow: 0 0 0 4px rgba(49, 89, 216, .1); }
+.sidebar { background: rgba(255, 253, 247, .88); border-right-color: var(--terrace-line); box-shadow: 8px 0 28px rgba(49, 89, 216, .05); }
+.sidebar-nav a.is-active { background: linear-gradient(100deg, #e7edff, #fff1dd); color: var(--terrace-cobalt-deep); box-shadow: inset 4px 0 0 var(--terrace-cobalt); }
+.sidebar-nav a:hover { color: var(--terrace-cobalt); background: #f4f7ff; }
+.app-body { background: transparent; }
+.page-grid { background: transparent; }
+.page-intro h1, .home-hero h1 { color: var(--terrace-ink); letter-spacing: -.055em; }
+.stories-card, .composer-card, .post-card, .right-rail-card, .messages-layout, .settings-card { border-color: var(--terrace-line); border-radius: 26px; background: rgba(255, 255, 255, .9); box-shadow: 0 18px 45px rgba(37, 55, 97, .08); }
+.stories-card { background: linear-gradient(135deg, #fffdf8, #f5f8ff); }
+.story-ring { border-color: var(--terrace-coral); box-shadow: 0 0 0 4px rgba(244, 200, 75, .22); }
+.story-ring.is-yours { border-color: var(--terrace-cobalt); }
+.primary-button, .share-button, .send-button { background: linear-gradient(110deg, var(--terrace-coral), #ec3d93); box-shadow: 0 9px 20px rgba(239, 101, 77, .22); }
+.primary-button:hover, .share-button:hover, .send-button:hover { filter: saturate(1.08); transform: translateY(-2px); }
+.secondary-button, .explore-tags button { border-color: var(--terrace-line); background: #fff; color: var(--terrace-cobalt-deep); }
+.explore-banner, .prompt-card { border-color: #eedb91; background: linear-gradient(135deg, #fff2b9, #fff9dc); }
+.explore-banner h2, .prompt-card h2 { color: var(--terrace-ink); }
+.post-card.post-note { background: linear-gradient(135deg, #fffdf6, #eff6ff); }
+.post-card.post-quote { border-top-color: var(--terrace-marigold); }
+.post-action:hover, .save-button:hover { color: var(--terrace-cobalt); background: #edf2ff; }
+.post-action.is-liked { color: var(--terrace-coral); }
+.inbox-heading, .thread-header { background: #fffdf8; border-color: var(--terrace-line); }
+.conversation-row.is-active { background: linear-gradient(100deg, #fff0e7, #fff8f1); box-shadow: inset 3px 0 0 var(--terrace-coral); }
+.message-bubble.is-outgoing { background: linear-gradient(120deg, var(--terrace-cobalt), #5d7ff0); color: #fff; }
+.message-bubble.is-incoming { background: #f1f4fa; color: var(--terrace-ink); }
+.notification-badge, .unread-badge { background: var(--terrace-coral); }
+.mobile-nav { background: rgba(255, 253, 247, .94); border-top-color: var(--terrace-line); box-shadow: 0 -8px 24px rgba(37, 55, 97, .08); }
+@media (prefers-reduced-motion: no-preference) {
+  .stories-card, .composer-card, .post-card, .right-rail-card { transition: transform .2s ease-out, box-shadow .2s ease-out; }
+  .stories-card:hover, .composer-card:hover, .post-card:hover, .right-rail-card:hover { transform: translateY(-3px); box-shadow: 0 24px 52px rgba(37, 55, 97, .12); }
+}
+
+/* Luminous Terrace identity pass: cobalt owns structure, marigold owns discovery, coral owns human action. */
+@media (min-width: 801px) {
+  .sidebar {
+    background: var(--terrace-cobalt-deep);
+    border-right: 0;
+    color: #fff;
+    box-shadow: 10px 0 34px rgba(23, 54, 129, .2);
+  }
+  .sidebar::after {
+    content: "";
+    position: absolute;
+    right: 18px;
+    bottom: 26px;
+    width: 90px;
+    height: 90px;
+    border: 1px solid rgba(244, 200, 75, .28);
+    border-radius: 50%;
+    box-shadow: -28px -18px 0 -20px rgba(244, 200, 75, .6);
+    pointer-events: none;
+  }
+  .sidebar .sidebar-profile, .sidebar .sidebar-section, .sidebar small, .sidebar p, .sidebar span { color: rgba(255, 255, 255, .72); }
+  .sidebar .sidebar-profile strong, .sidebar .sidebar-section h3, .sidebar .sidebar-section a span { color: #fff; }
+  .sidebar-nav a { color: rgba(255, 255, 255, .78); border-radius: 14px; }
+  .sidebar-nav a:hover { color: #fff; background: rgba(255, 255, 255, .1); }
+  .sidebar-nav a.is-active { color: var(--terrace-cobalt-deep); background: #fff; box-shadow: none; }
+  .sidebar .primary-button { background: var(--terrace-marigold); color: var(--terrace-ink); box-shadow: none; }
+  .sidebar .primary-button:hover { background: #ffe18a; }
+}
+.topbar .brand-symbol { background: var(--terrace-cobalt); border-radius: 12px; }
+.topbar .brand-wordmark { font-family: Georgia, serif; font-weight: 800; }
+.page-intro .eyebrow, .home-hero .eyebrow, .right-rail-card .eyebrow { color: var(--terrace-cobalt); }
+.home-hero::before, .page-intro::before { background: var(--terrace-marigold); }
+.explore-banner, .prompt-card { position: relative; overflow: hidden; }
+.explore-banner::after, .prompt-card::after { content: ""; position: absolute; right: -28px; bottom: -34px; width: 120px; height: 120px; border: 1px solid rgba(49, 89, 216, .18); border-radius: 50%; }
+.right-rail-card h3, .right-sidebar h3 { color: var(--terrace-cobalt-deep); }
+.profile-cover { background: var(--terrace-cobalt-deep) !important; }
+.profile-cover::after { background: rgba(244, 200, 75, .22); }
+.settings-nav a.is-active { color: var(--terrace-cobalt); background: #eef2ff; box-shadow: inset 3px 0 0 var(--terrace-cobalt); }
