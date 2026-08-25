@@ -76,3 +76,25 @@
 - [x] Verify story rendering, active-story behavior, the production build, and the regenerated archive.
 - [ ] Save a stable checkpoint and report the corrected version.
 
+
+## Persistent stale PostContext error
+
+- [ ] Confirm the user’s project is using the corrected `src/context/PostContext.jsx` rather than an older extracted copy.
+- [ ] Provide exact replacement code and import options for `StoryBar.jsx`.
+- [ ] Explain cache/duplicate-folder checks and verify the corrected source build.
+
+
+## Persistent named-export mismatch follow-up
+
+- [ ] Trace whether the user is running an older `PostContext.jsx`, duplicate `src` folder, or stale Vite module graph.
+- [ ] Confirm the exact hook name used by `StoryBar.jsx` and the export in the loaded context file.
+- [ ] Provide a clean replacement and restart procedure after verification.
+
+
+## GitHub and Vercel delivery
+
+- [ ] Inspect the selected food-delivery repository without modifying it.
+- [ ] Prepare a safe separate GitHub output for the corrected Dina Chat project.
+- [ ] Verify Vercel configuration and production build.
+- [ ] Save a checkpoint and report the safe repository and hosting status.
+
