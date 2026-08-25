@@ -136,3 +136,19 @@
 - [ ] Confirm the requested source tree remains the only application source addition.
 - [ ] Verify the output page and Vercel build settings without adding unnecessary files.
 
+
+## New Instagram dashboard reference
+
+- [ ] Use the attached Instagram home screen as the visual ground truth.
+- [ ] Preserve only the requested JSX source files and `index.css`; do not add application source files.
+- [ ] Refine the home output while retaining Dinoc branding and existing interactions.
+- [ ] Verify build, output page, and GitHub-ready state.
+
+
+## Instagram Direct-style chat redesign
+
+- [ ] Inspect the existing Messages, ChatList, ChatWindow, and MessageContext contracts.
+- [ ] Refine the conversation list, active thread, message bubbles, composer, and responsive mobile chat.
+- [ ] Preserve local replies, unread clearing, and existing JSX-only structure.
+- [ ] Verify desktop/mobile chat output and save a checkpoint.
+
