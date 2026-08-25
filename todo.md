@@ -46,3 +46,8 @@
 - [ ] Complete interactive chat, stories, comments, notifications, auth, and settings.
 - [ ] Verify the exact JSX-only tree, responsive routes, and production build.
 - [ ] Package the ZIP and prepare safe GitHub-ready output.
+
+- [ ] Rename visible brand surfaces from Dinoc to Dina Chat.
+- [ ] Refresh the output page and chat copy for the Dina Chat identity.
+- [ ] Preserve and verify the exact JSX-only source tree and client-side interactions.
+- [ ] Rebuild and package the Dina Chat source-only ZIP.
