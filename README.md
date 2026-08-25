@@ -5,7 +5,7 @@ A responsive React and Vite social-media journal built with plain JavaScript and
 ## Project structure
 
 ```text
-social-media-app/
+chat-social-app/
 ├── src/
 │   ├── assets/
 │   ├── components/
@@ -41,6 +41,8 @@ social-media-app/
 │   ├── App.jsx
 │   ├── main.jsx
 │   └── index.css
+├── public/
+│   └── screenshots/
 ├── index.html
 ├── package.json
 ├── vite.config.js

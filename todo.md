@@ -98,3 +98,11 @@
 - [ ] Verify Vercel configuration and production build.
 - [ ] Save a checkpoint and report the safe repository and hosting status.
 
+
+## chat-social-app structure alignment
+
+- [x] Compare the current tree with the requested `chat-social-app` layout.
+- [x] Add empty `src/assets/` and `public/screenshots/` directories while preserving runtime assets policy.
+- [x] Confirm all requested JSX files, `mockData.js`, `index.css`, Vite files, and README are present.
+- [x] Verify the build and corrected PostContext exports, then save a checkpoint.
+
